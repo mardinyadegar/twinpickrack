@@ -42,9 +42,8 @@ nav .navbar .navbar-expand-lg{
 }
 
 .navigation .navbar-brand img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  max-height: 100%;
+  width: auto;
 }
 
 @media (max-width: 991px) {
@@ -498,7 +497,7 @@ a:hover,a:focus{ color:var(--tl-orange); }
 .znav-white a:not(.btn):hover{ color:#fff!important; }
 .znav-white .dropdown,.znav-white .megamenu{ background:var(--tl-graphite)!important; }
 .navbar-elixir{ box-shadow:0 4px 18px rgba(0,0,0,.35); }
-.navigation .navbar-brand{ background:var(--tl-graphite)!important; border-bottom:5px solid var(--tl-orange); display:flex; align-items:center; justify-content:center; }
+.navigation .navbar-brand{ background:var(--tl-graphite)!important; display:flex; align-items:center; justify-content:center; }
 .twinlode-logo-mark{ font-family:"Montserrat",sans-serif; font-size:1.35rem; letter-spacing:.08em; text-transform:uppercase; font-weight:800; color:#fff; }
 .twinlode-loader-mark{ font-family:"Montserrat",sans-serif; text-transform:uppercase; letter-spacing:.12em; font-weight:800; color:var(--tl-blue); padding:1.25rem; }
 .flexslider{ background:var(--tl-graphite)!important; }
@@ -603,7 +602,7 @@ footer a:hover {
     text-decoration: underline;
 }
 /* =========================================================
-   Twinpick Storage Systems page
+   Twin Pick Rack Storage Systems page
    ========================================================= */
 .storage-hero{
   position:relative;
