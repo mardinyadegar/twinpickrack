@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>Cloud Services | Architecting</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/GoodFav.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/GoodFav.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/GoodFav.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicons/GoodFav.png">
+        <link rel="manifest" href="https://bennettdierckman.github.io/Twinlode/assets/images/favicons/manifest.json">
+        <!-- safaripinnedtab -->
+        <link rel="mask-icon" href="assets/images/favicons/GoodFav.svg" color="#5bbad5">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/GoodFav.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link href="assets/lib/hamburgers/dist/hamburgers.min.css" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> </head>
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main class="background-10">
+            <div class="loading" id="preloader">
+                <div class="loader h-100 d-flex align-items-center justify-content-center">
+                    <div class="background-white radius-secondary goodGifLoader">
+                        <img src="assets/images/favicons/goodGif.gif">
+                    </div>
+                </div>
+            </div>
+                <div class="sticky-top">
+                <section class="background-primary d-none d-sm-block" style=" padding: .75%; opacity: .9;">
+                    <div class="container">
+                        <div class="row align-items-center d-flex-end">
+                            <div class="col-auto">
+                                <div style="opacity: 1;">
+                                    <span class="fa fa-send-o color-warning fw-800 icon-position-fix"></span>
+                                    <a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="mailto:info@goodfeatherconsulting.com">info@goodfeatherconsulting.com </a><span class="text-white">&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="fa fa-phone color-warning fw-800 icon-position-fix"></span>
+                                    <a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="tel:+18662143811">+1 (866) 214 - 3811</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <!--/.container-->
+                </section>
+                <div class="znav-white znav-container navbar-elixir" id="znav-container">
+                    <div class="container navigation pt-1 pb-0 py-lg-2">
+                        <nav class="navbar navbar-expand-lg pb-0 pt-0">
+                            <a class="navbar-brand  pl-1 pt-0 pr-1" href="index.html">
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/GOOD_FEATHER_VERTICAL_COLOR_CONSULTING.png" alt="" />
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="hamburger hamburger--emphatic">
+                                    <div class="hamburger-box">
+                                        <div class="hamburger-inner"></div>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav fs-0 fw-700 ml-auto">
+                                    <li>
+                                        <a class="d-block" href="index.html">Home</a>
+                                    </li>
+                                    <li class="mr-lg-2">
+                                        <a href="JavaScript:Void">Services</a>
+                                        <ul class="dropdown fs--1">
+                                            <li class="d-none d-lg-block">
+                                                <a href="dataSecurity.html">Data Security</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="developerShield.html">Developer Shield&trade;</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="documentShield.html">Document Shield&trade;</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="dataSecurity.html">Data Security</a>
+                                            </li>
+                                            <li class="d-none d-lg-block">
+                                                <a href="serviceManagedServices.html">Managed Services</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="dataCenterServices.html">Data Center Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="databaseManagement.html">Database Management</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="networkingManagement.html">Network Management</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="applicationManagement.html">Application Management</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="remoteInfrastructureManagement.html">Remote Infrastructure Management</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="serviceManagedServices.html">Managed Services</a></li>
+                                            <li class="d-none d-lg-block">
+                                                <a href="professionalServices.html">Professional Services</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="implementationServices.html">Implementation Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="resourcing.html">Resourcing</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="professionalServices.html">Professional Services</a>
+                                            </li>
+                                            <li class="d-none d-lg-block">
+                                                <a href="cloudServices.html">Cloud Services</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="cloudConsultation.html">Consulting</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="cloudArchitecture.html">Architechting Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="migratingAndDeployment.html">Migrating and Deployment</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="managedServices.html">Managed Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="monitoringAndHelpDesk.html">Monitoring and Help Desk</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="cloudServices.html">Cloud Services</a>
+                                            </li>
+                                            <li class="d-none d-lg-block">
+                                                <a href="digitalWorkspaceServices.html">Digital Workplace</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="office365.html">Office on the Cloud</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="vdi.html">Desktop Virtualization - VDI</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="enterpriseAppStore.html">Enterprise App Store</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="uxMonitoring.html">User Experience Monitoring</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="endpointSecurity.html">Endpoint Security</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="digitalWorkspaceServices.html">Digital Workplace</a>
+                                            </li>
+                                            <li class="d-none d-lg-block">
+                                                <a href="automation.html">Automation Services</a>
+                                                <ul class="dropdown dropdownWide fs--1">
+                                                    <li>
+                                                        <a href="itServiceManagement.html">IT Service Management</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="devOps.html">DevOps</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="itProcessAutomation.html">IT Process Automation</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-lg-none">
+                                                <a href="automation.html">Automation Services</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="partners.html">Partners</a>
+                                    </li>
+                                    <li>
+                                        <a href="team.html">Leadership</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-outline-primary btn-capsule btn-sm ml-xl-5 ml-lg-10 border-2x fw-700" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <div class="background-holder background-fixed-sometimes" style="background-image:url(assets/images/blueBack.jpg);background-position: center bottom !important; z-index: 10"> </div>
+                    <!--/.background-holder-->
+                    <div class="container"  style="z-index: 30;">
+                        <div class="row pt-6" data-inertia='{"weight":1.5}'>
+                            <div class="col-md-8 px-md-0 color-white" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                <div class="overflow-hidden"">
+                                    <h1 class="color-white fs-4 fs-md-5 mb-0 zopacity" data-zanim='{"delay":0}'>Cloud Architecture</h1>
+                                    <div class="nav zopacity" aria-label="breadcrumb" role="navigation" data-zanim='{"delay":0.1}'>
+                                        <ol class="breadcrumb fs-1 pl-0 fw-700">
+                                            <li class="breadcrumb-item">
+                                                <a class="color-white" href="index.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <a class="color-white" href="cloudServices.html">Cloud Services</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Architecting Services</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-9 pt-4 pt-md-5 pb-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="background-white p-3 p-xl-4 radius-secondary moreServices">
+                                        <p class="dropcap">Though organizations have a strategic plan in place to solve their critical business challenges by leveraging on cloud technology, their existing physical architecture may not allow for a straight forward lift and shift migration to the cloud.</p>
+                                        <p>Good Feather follows a proven methodology to determine your requirements and devise appropriate cloud architecture. Each step in the process of planning cloud architecture design needs to be carefully executed to ensure you get a reliable, high-performance service. The design process is iterative and flexible. We collaboratively work with your IT teams to assess existing IT setup, workload and application needs to choose the right platform and offer a design that will fit in best for your cloud journey.</p>
+                                        <p>We assess and design solutions on IBM Cloud, AWS or Microsoft Azure based on cost and performance parameters. Our Cloud Architecture deliverables includes:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="mb-2">Requirement Gathering </p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Sizing of the cloud machines </p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">System Design</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">dentifying location for the Data Center</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Storage Design</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Network design</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Network Security Design</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Applications /Database Architecture</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Backup Strategy</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Migration Strategy</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">DR Strategy</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Security Design</p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2">Testing and POC</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center ml-auto mt-5 mt-lg-0">
+                            <div class="row px-2 mt-2">
+                                <div class="col-12 col-md-6 col-lg-12 mb-5">
+                                    <div class="background-10 p-3 radius-secondary moreServices">
+                                        <h5>Request Consultation: Architecting Services</h5>
+                                        <form action="https://bennettdierckman.github.io/Twinlode/assets/php/serviceRequest.php" method="post" class="mt-2">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <input class="form-control background-white" id="name" name="name" type="text" placeholder="Full Name *" aria-label="Text input with dropdown button" required> </div>
+                                                <div class="col-12 mt-2">
+                                                    <input class="form-control background-white" id="email" name="email" type="email" placeholder="Email *" aria-label="Text input with dropdown button" required> </div>
+                                                <div class="col-12 mt-2">
+                                                    <input class="form-control background-white" id="company" name="company" type="text" placeholder="Company *" aria-label="Text input with dropdown button" required> </div>
+                                                <div class="col-12 mt-2">
+                                                    <input class="form-control background-white" id="title" name="title" type="text" placeholder="Title" aria-label="Text input with dropdown button"> </div>
+                                                <div class="col-12 mt-2">
+                                                    <textarea class="form-control background-white" id="message" name="message" rows="6" placeholder="Message *" aria-label="Text input with dropdown button" required></textarea>
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <input type="hidden" id="previousPage" name="previousPage" value="../../cloudArchitecture.html">
+                                                    <input type="hidden" id="service" name="service" value="Architecting Services">
+                                                    <button class="btn btn-primary" type="Submit">
+                                                        <span class="color-white fw-600">Send Request</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="col-12 col-md-6 col-lg-12 mt-0 mt-md-0 mt-lg-0">
+                                    <div class=" pt-3 pb-5 radius-secondary moreServices background-10">
+                                        <h5 class="mb-0">More Cloud Services</h5>
+                                        <div class="owl-carousel owl-theme owl-nav-outer owl-dot-round mt-2" data-options='{"items":1, "nav": true, "autoplay": true, "rewind": true}'>
+                                            <div class="item">
+                                                <div class="background-white pb-2 h-100">
+                                                    <a href="migratingAndDeployment.html">
+                                                        <div class="serviceGradient2 w-100  d-flex-deadCenter" >
+                                                            <h3 class="text-center">Migrating<br>and<br>Deployment</h3>
+                                                        </div>
+                                                    </a>
+                                                    <div class="px-4 pt-0 d-none d-md-block text-left">
+                                                        <p class="mt-3">On a public cloud all resources are shared so the application response changes and users start having issues with performance of the application. Good Feather&rsquo;s managed cloud service offerings are a comprehensive suite of cloud workload migration and deployment plans which result in minimum business disruption by leveraging cloud platforms like IBM Cloud, Microsoft Azure & AWS.</p>
+                                                        <a href="migratingAndDeployment.html">Learn More &xrarr;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="background-white pb-2 h-100">
+                                                    <a href="managedServices.html">
+                                                        <div class="serviceGradient2 w-100  d-flex-deadCenter" >
+                                                            <h3 class="text-center">Managed<br>Serivces</h3>
+                                                        </div>
+                                                    </a>
+                                                    <div class="px-4 pt-0 d-none d-md-block text-left">
+                                                        <p class="mt-3">Good Feather provides more than 10 years of experience in providing managed services for Data Centers. This experience has helped us to manage diverse sets of cloud operations and processes. We offer 24X7 monitoring & support services to manage your applications and infrastructure both on-site, as well as, through Private Cloud or remotely using a public cloud infrastructure.</p>
+                                                        <a href="managedServices.html">Learn More &xrarr;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="background-white pb-2 h-100">
+                                                    <a href="monitoringAndHelpDesk.html">
+                                                        <div class="serviceGradient2 w-100  d-flex-deadCenter" >
+                                                            <h3 class="text-center">Monitoring and<br>Help Desk</h3>
+                                                        </div>
+                                                    </a>
+                                                    <div class="px-4 pt-0 d-none d-md-block text-left">
+                                                        <p class="mt-3">Good Feather Monitoring services encompass use of different tools to monitor the health and performance of Systems, Network, Storage devices, Operating Systems, Applications, Databases, and Backups. This gives a high level visibility to management of IT components in a data center and helps in taking proactive steps in identifying and resolving issues even before they occur and help prevent critical impact on business.</p>
+                                                        <a href="monitoringAndHelpDesk.html">Learn More &xrarr;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="background-white pb-2 h-100">
+                                                    <a href="cloudConsultation.html">
+                                                        <div class="serviceGradient2 w-100  d-flex-deadCenter" >
+                                                            <h3 class="text-center">Cloud<br>Consultation</h3>
+                                                        </div>
+                                                    </a>
+                                                    <div class="px-4 pt-0 d-none d-md-block text-left">
+                                                        <p class="mt-3">Migrating to the cloud is challenging when organizations are responsibie for data security and high availability for various applications. Good Feather guides you through cloud migration, helping ensure your data's security thouought the migration process.</p>
+                                                        <a href="cloudConsultation.html">Learn More &xrarr;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            
+            <section class="mt-0  py-3 background-9">
+                <div class="container">
+                    <div
+                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 1}' class="owl-carousel owl-theme d-md-none">
+                        <div class="item overflow-hidden">
+                            <div class="partnerLogoSlide">
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide4.jpg" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flexDeadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide1.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlider2.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide3.png"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex-deadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide5.png" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 2}' class="owl-carousel owl-theme d-none d-md-block d-lg-none">
+                        <div class="item overflow-hidden">
+                            <div class="partnerLogoSlide">
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide4.jpg" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flexDeadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide1.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlider2.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide3.png"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex-deadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide5.png" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 3, "margin": 20}' class="owl-carousel owl-theme d-none d-lg-block">
+                        <div class="item overflow-hidden d-flexDeadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide1.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden">
+                            <div class="partnerLogoSlide">
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide4.jpg" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide3.png"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlider2.png" style="max-width: 100%; max-height: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="item overflow-hidden d-flex-deadCenter">
+                            <div class="partnerLogoSlideSquare">    
+                                <img src="https://bennettdierckman.github.io/Twinlode/assets/images/logoSlide5.png" style="max-width: 100%; max-height: 100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="backgroundFixed2 py-4 py-lg-5" style="padding-bottom: 0 !important;">
+                <div class="container">
+                    <div class="row align-items-center color-white">
+                        <div class="col-lg-4">
+                            <div class="border border-2x border-color-warning p-4 py-lg-4 text-center radius-secondary" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                <div class="overflow-hidden">
+                                    <h4 class="color-white" data-zanim='{"delay":0}'>Connect with Us</h4>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="px-lg-1 color-11 mb-0" data-zanim='{"delay":0.1}'>Get connected with a Good Feather Consultant today</p>
+                                </div>
+                                <div class="row mt-3 align-items-center no-gutters">
+                                    <div class="col-4 d-flex-deadCenter">
+                                        <a href="cloudArchitecture.html#" target="_blank">
+                                            <div class="background-goodGray text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;">
+                                                <span class="w-100 fa fa-twitter color-white"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 d-flex-deadCenter">
+                                        <a href="mailto:info@goodfeatherconsulting.com">
+                                            <div class="background-goodGray text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;">
+                                                <span class="w-100 fa fa-envelope color-white"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 d-flex-deadCenter">
+                                        <a href="https://www.linkedin.com/company/goodfeatherconsulting/about/" target="_blank">
+                                            <div class="background-goodGray text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;">
+                                                <span class="w-100 fa fa-linkedin color-white"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 pl-lg-5 mt-3 mt-lg-0">
+                            <h5 class="color-white mb-0">Schedule a Call:</h5>
+                            <form class="mt-4" action="https://bennettdierckman.github.io/Twinlode/assets/php/callGFC.php"  method="post">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="hidden" />
+                                        <input class="form-control" type="text" name="name" required id="name" placeholder="Your Name" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-sm-6 mt-4 mt-sm-0">
+                                        <input class="form-control" type="text" name="phone" required id="phone" placeholder="Phone Number" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-sm-6 mt-4">
+                                        <input class="form-control" type="text" name="email" required id="email" placeholder="Email" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-sm-6 mt-4">
+                                        <input type="hidden" id="previousPage" name="previousPage" value="../../index.html">
+                                        <button class="btn btn-goodGray btn-block" type="submit">Submit</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mt-4"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 text-center text-white mt-3 mt-md-3 mt-lg-5 mb-3 ">
+                            <a href="cloudArchitecture.html#" class="text-white"> &copy; Copyright 2018 Good Feather Consulting.</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/lib/gsap/src/minified/TweenMax.min.js"></script>
+        <script src="assets/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+        <script src="assets/lib/CustomEase.min.js"></script>
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/zanimation.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

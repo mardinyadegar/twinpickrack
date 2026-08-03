@@ -1,0 +1,1950 @@
+/*============= MAP SECTION ===============*/
+.mapContainer{
+  width: 100%;
+}
+.goodFeatherMap{
+  position: absolute;
+}
+.consultantOnMap{
+  position: absolute !important;
+  height: 40px;
+  width: 40px;
+}
+.chattanooga_pin{
+/*  background-color: green;
+*/  
+  width: 40px;
+  height: 40px;
+  top: 172px;
+  right: 275px;
+}
+.nashville_pin{
+/*  background-color: blue;
+*/  top: 155px;
+  right: 306px;
+} 
+.knoxville_pin{
+  background-color: gray;
+  top: 155px;
+  right: 250px;
+}
+.birmingham_pin{
+/*  background-color: red;
+*/  top: 200px;
+  right:305px;
+}
+.atlanta_pin{
+/*  background-color: orange;
+*/  top: 200px;
+  right: 255px;
+}
+.florida_pin{
+/*  background-color: purple;
+*/  top:245px;
+  right: 270px;
+}
+.bahama_pin{
+  background-color:tan;
+  top:270px;
+  right:235px;
+}
+.washington_pin{
+  background-color: teal;
+  top: 170px;
+  right: 220px;
+}
+.detroit_pin{
+  background-color: maroon;
+  top: 115px;
+  right: 225px;
+}
+.dallas_pin{
+  background-color: brown;
+  top:205px;
+  right: 390px;
+}
+.bay_pin{
+/*  background-color: magenta;
+*/  width: 55px;
+  height: 55px;
+  top: 155px;
+  right: 550px;
+}
+@media (min-width: 810px) { 
+  .nashville_pin{
+    top: 160px;
+    right: 320px;
+  }
+  .chattanooga_pin{
+    top: 177px;
+    right: 292px;
+  }
+  .knoxville_pin{
+    top: 160px;
+    right: 265px;
+  }
+  .birmingham_pin{
+    top: 210px;
+    right:315px;
+  }
+  .atlanta_pin{
+    top: 205px;
+    right: 265px;
+  }
+  .florida_pin{
+    top:255px;
+    right: 280px;
+  }
+  .bahama_pin{
+    top:280px;
+    right:250px;
+  }
+  .washington_pin{
+    top: 175px;
+    right: 230px;
+  }
+  .detroit_pin{
+    top: 120px;
+    right: 235px;
+  }
+  .dallas_pin{
+    top:215px;
+    right: 410px;
+  }
+  .bay_pin{
+    top: 160px;
+    right: 575px;
+  }
+}
+
+@media (min-width: 830px) { 
+  .nashville_pin{
+    top: 165px;
+    right: 325px;
+  }
+  .chattanooga_pin{
+    top: 185px;
+    right: 300px;
+  }
+  .knoxville_pin{
+    top: 165px;
+    right: 270px;
+  }
+  .birmingham_pin{
+    top: 215px;
+    right:320px;
+  }
+  .atlanta_pin{
+    top: 210px;
+    right: 275px;
+  }
+  .florida_pin{
+    top:260px;
+    right: 290px;
+  }
+  .bahama_pin{
+    top:290px;
+    right:255px;
+  }
+  .washington_pin{
+    top: 185px;
+    right: 235px;
+  }
+  .detroit_pin{
+    top: 125px;
+    right: 240px;
+  }
+  .dallas_pin{
+    top:220px;
+    right: 420px;
+  }
+  .bay_pin{
+    top: 160px;
+    right: 585px;
+  }
+}
+
+@media (min-width: 850px) {
+  .nashville_pin{
+    top: 170px;
+    right: 335px;
+  }
+  .chattanooga_pin{
+    top: 190px;
+    right: 310px;
+  }
+  .knoxville_pin{
+    top: 170px;
+    right: 280px;
+  }
+  .birmingham_pin{
+    top: 220px;
+    right:335px;
+  }
+  .atlanta_pin{
+    top: 215px;
+    right: 285px;
+  }
+  .florida_pin{
+    top:265px;
+    right: 300px;
+  }
+  .bahama_pin{
+    top:295px;
+    right:265px;
+  }
+  .washington_pin{
+    top: 190px;
+    right: 245px;
+  }
+  .detroit_pin{
+    top: 130px;
+    right: 250px;
+  }
+  .dallas_pin{
+    top:225px;
+    right: 430px;
+  }
+  .bay_pin{
+    top: 165px;
+    right: 595px;
+  }
+}
+
+@media (min-width: 875px) {
+  .nashville_pin{
+    top: 175px;
+    right: 345px;
+  }
+  .chattanooga_pin{
+    top: 195px;
+    right: 320px;
+  }
+  .knoxville_pin{
+    top: 175px;
+    right: 290px;
+  }
+  .birmingham_pin{
+    top: 230px;
+    right:345px;
+  }
+  .atlanta_pin{
+    top: 225px;
+    right: 295px;
+  }
+  .florida_pin{
+    top:280px;
+    right: 310px;
+  }
+  .bahama_pin{
+    top:310px;
+    right:275px;
+  }
+  .washington_pin{
+    top: 195px;
+    right: 255px;
+  }
+  .detroit_pin{
+    top: 135px;
+    right: 255px;
+  }
+  .dallas_pin{
+    top:235px;
+    right: 445px;
+  }
+  .bay_pin{
+    top: 170px;
+    right: 615px;
+  }
+}
+@media (min-width: 900px) {
+  .nashville_pin{
+    top: 180px;
+    right: 355px;
+  }
+  .chattanooga_pin{
+    top: 200px;
+    right: 325px;
+  }
+  .knoxville_pin{
+    top: 180px;
+    right: 290px;
+  }
+  .birmingham_pin{
+    top: 235px;
+    right:355px;
+  }
+  .atlanta_pin{
+    top: 230px;
+    right: 300px;
+  }
+  .florida_pin{
+    top:285px;
+    right: 320px;
+  }
+  .bahama_pin{
+    top:320px;
+    right:280px;
+  }
+  .washington_pin{
+    top: 200px;
+    right: 260px;
+  }
+  .detroit_pin{
+    top: 140px;
+    right: 265px;
+  }
+  .dallas_pin{
+    top:240px;
+    right: 455px;
+  }
+  .bay_pin{
+    top: 170px;
+    right: 630px;
+  }
+}
+@media (min-width: 925px) {
+  .nashville_pin{
+    top: 185px;
+    right: 365px;
+  }
+  .chattanooga_pin{
+    top: 205px;
+    right: 335px;
+  }
+  .knoxville_pin{
+    top: 185px;
+    right: 300px;
+  }
+  .birmingham_pin{
+    top: 240px;
+    right:365px;
+  }
+  .atlanta_pin{
+    top: 235px;
+    right: 310px;
+  }
+  .florida_pin{
+    top:290px;
+    right: 330px;
+  }
+  .bahama_pin{
+    top:325px;
+    right:290px;
+  }
+  .washington_pin{
+    top: 205px;
+    right: 270px;
+  }
+  .detroit_pin{
+    top: 145px;
+    right: 275px;
+  }
+  .dallas_pin{
+    top:245px;
+    right: 465px;
+  }
+  .bay_pin{
+    top: 175px;
+    right: 650px;
+  }
+}
+@media (min-width: 950px) {
+    .nashville_pin{
+    top: 190px;
+    right: 375px;
+  }
+  .chattanooga_pin{
+    top: 210px;
+    right: 345px;
+  }
+  .knoxville_pin{
+    top: 190px;
+    right: 315px;
+  }
+  .birmingham_pin{
+    top: 245px;
+    right:375px;
+  }
+  .atlanta_pin{
+    top: 240px;
+    right: 315px;
+  }
+  .florida_pin{
+    top:295px;
+    right: 335px;
+  }
+  .bahama_pin{
+    top:330px;
+    right:295px;
+  }
+  .washington_pin{
+    top: 210px;
+    right: 270px;
+  }
+  .detroit_pin{
+    top: 145px;
+    right: 275px;
+  }
+  .dallas_pin{
+    top:250px;
+    right: 480px;
+  }
+  .bay_pin{
+    top: 185px;
+    right: 670px;
+  }
+}
+@media (min-width: 975px) {
+  .nashville_pin{
+    top: 195px;
+    right: 385px;
+  }
+  .chattanooga_pin{
+    top: 215px;
+    right: 355px;
+  }
+  .knoxville_pin{
+    top: 195px;
+    right: 325px;
+  }
+  .birmingham_pin{
+    top: 250px;
+    right:385px;
+  }
+  .atlanta_pin{
+    top: 245px;
+    right: 325px;
+  }
+  .florida_pin{
+    top:300px;
+    right: 345px;
+  }
+  .bahama_pin{
+    top:335px;
+    right:305px;
+  }
+  .washington_pin{
+    top: 215px;
+    right: 280px;
+  }
+  .detroit_pin{
+    top: 150px;
+    right: 285px;
+  }
+  .dallas_pin{
+    top:255px;
+    right: 490px;
+  }
+  .bay_pin{
+    top: 190px;
+    right: 685px;
+  }
+}
+@media (min-width: 1000px) {
+  .nashville_pin{
+    top: 200px;
+    right: 395px;
+  }
+  .chattanooga_pin{
+    top: 225px;
+    right: 365px;
+  }
+  .knoxville_pin{
+    top: 200px;
+    right: 335px;
+  }
+  .birmingham_pin{
+    top: 260px;
+    right:395px;
+  }
+  .atlanta_pin{
+    top: 255px;
+    right: 335px;
+  }
+  .florida_pin{
+    top:310px;
+    right: 355px;
+  }
+  .bahama_pin{
+    top:345px;
+    right:315px;
+  }
+  .washington_pin{
+    top: 220px;
+    right: 290px;
+  }
+  .detroit_pin{
+    top: 155px;
+    right: 295px;
+  }
+  .dallas_pin{
+    top:265px;
+    right: 505px;
+  }
+  .bay_pin{
+    top: 195px;
+    right: 705px;
+  }
+}
+@media (min-width: 1025px) {
+  .consultantOnMap{
+    width: 50px;
+    height: 50px;
+  }
+  .nashville_pin{
+    top: 205px;
+    right: 400px;
+  }
+  .chattanooga_pin{
+    top: 230px;
+    right: 370px;
+  }
+  .knoxville_pin{
+    top: 205px;
+    right: 335px;
+  }
+  .birmingham_pin{
+    top: 265px;
+    right:405px;
+  }
+  .atlanta_pin{
+    top: 260px;
+    right: 345px;
+  }
+  .florida_pin{
+    top:320px;
+    right: 360px;
+  }
+  .bahama_pin{
+    top:355px;
+    right:315px;
+  }
+  .washington_pin{
+    top: 225px;
+    right: 290px;
+  }
+  .detroit_pin{
+    top: 155px;
+    right: 295px;
+  }
+  .dallas_pin{
+    top:270px;
+    right: 515px;
+  }
+  .bay_pin{
+    width: 65px;
+    height: 65px;
+    top: 200px;
+    right: 720px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .nashville_pin{
+    top: 210px;
+    right: 410px;
+  }
+  .chattanooga_pin{
+    top: 235px;
+    right: 380px;
+  }
+  .knoxville_pin{
+    top: 210px;
+    right: 345px;
+  }
+  .birmingham_pin{
+    top: 270px;
+    right:415px;
+  }
+  .atlanta_pin{
+    top: 270px;
+    right: 350px;
+  }
+  .florida_pin{
+    top:330px;
+    right: 370px;
+  }
+  .bahama_pin{
+    top:370px;
+    right:325px;
+  }
+  .washington_pin{
+    top: 230px;
+    right: 300px;
+  }
+  .detroit_pin{
+    top: 160px;
+    right: 305px;
+  }
+  .dallas_pin{
+    top:280px;
+    right: 535px;
+  }
+  .bay_pin{
+    top: 205px;
+    right: 735px;
+  }
+}
+@media (min-width: 1075px) {
+  .nashville_pin{
+    top: 215px;
+    right: 420px;
+  }
+  .chattanooga_pin{
+    top: 240px;
+    right: 390px;
+  }
+  .knoxville_pin{
+    top: 215px;
+    right: 355px;
+  }
+  .birmingham_pin{
+    top: 275px;
+    right:425px;
+  }
+  .atlanta_pin{
+    top: 275px;
+    right: 360px;
+  }
+  .florida_pin{
+    top:335px;
+    right: 380px;
+  }
+  .bahama_pin{
+    top:375px;
+    right:335px;
+  }
+  .washington_pin{
+    top: 235px;
+    right: 310px;
+  }
+  .detroit_pin{
+    top: 165px;
+    right: 315px;
+  }
+  .dallas_pin{
+    top:285px;
+    right: 545px;
+  }
+  .bay_pin{
+    top: 210px;
+    right: 755px;
+  }
+}
+@media (min-width: 1125px) {
+  .nashville_pin{
+    top: 225px;
+    right: 450px;
+  }
+  .chattanooga_pin{
+    top: 250px;
+    right: 410px;
+  }
+  .knoxville_pin{
+    top: 225px;
+    right: 370px;
+  }
+  .birmingham_pin{
+    top: 295px;
+    right:450px;
+  }
+  .atlanta_pin{
+    top: 290px;
+    right: 380px;
+  }
+  .florida_pin{
+    top:360px;
+    right: 400px;
+  }
+  .bahama_pin{
+    top:395px;
+    right:355px;
+  }
+  .washington_pin{
+    top: 250px;
+    right: 325px;
+  }
+  .detroit_pin{
+    top: 170px;
+    right: 330px;
+  }
+  .dallas_pin{
+    top:305px;
+    right: 575px;
+  }
+  .bay_pin{
+    top: 225px;
+    right: 800px;
+  }
+}
+@media (min-width: 1175px) {
+  .nashville_pin{
+    top: 230px;
+    right: 455px;
+  }
+  .chattanooga_pin{
+    top: 255px;
+    right: 420px;
+  }
+  .knoxville_pin{
+    top: 230px;
+    right: 375px;
+  }
+  .birmingham_pin{
+    top: 300px;
+    right:455px;
+  }
+  .atlanta_pin{
+    top: 295px;
+    right: 385px;
+  }
+  .florida_pin{
+    top:365px;
+    right: 410px;
+  }
+  .bahama_pin{
+    top:405px;
+    right:360px;
+  }
+  .washington_pin{
+    top: 255px;
+    right: 330px;
+  }
+  .detroit_pin{
+    top: 175px;
+    right: 340px;
+  }
+  .dallas_pin{
+    top:310px;
+    right: 585px;
+  }
+  .bay_pin{
+    top: 230px;
+    right: 820px;
+  }
+}
+@media (min-width: 1200px) {
+ .consultantOnMap{
+    width: 35px;
+    height: 35px;
+  }
+  .nashville_pin{
+    top: 160px;
+    right: 315px;
+  }
+  .chattanooga_pin{
+    top: 180px;
+    right: 290px;
+  }
+  .knoxville_pin{
+    top: 160px;
+    right: 260px;
+  }
+  .birmingham_pin{
+    top: 205px;
+    right:315px;
+  }
+  .atlanta_pin{
+    top: 205px;
+    right: 265px;
+  }
+  .florida_pin{
+    top:250px;
+    right: 280px;
+  }
+  .bahama_pin{
+    top:280px;
+    right:245px;
+  }
+  .washington_pin{
+    top: 175px;
+    right: 225px;
+  }
+  .detroit_pin{
+    top: 120px;
+    right: 230px;
+  }
+  .dallas_pin{
+    top:210px;
+    right:400px;
+  }
+  .bay_pin{
+    width: 50px;
+    height: 50px;
+    top: 155px;
+    right: 560px;
+  } 
+}
+
+@media (min-width: 1250px) {
+  .nashville_pin{
+    top: 165px;
+    right: 325px;
+  }
+  .chattanooga_pin{
+    top: 185px;
+    right: 300px;
+  }
+  .knoxville_pin{
+    top: 165px;
+    right: 270px;
+  }
+  .birmingham_pin{
+    top: 210px;
+    right:325px;
+  }
+  .atlanta_pin{
+    top: 210px;
+    right: 275px;
+  }
+  .florida_pin{
+    top:255px;
+    right: 290px;
+  }
+  .bahama_pin{
+    top:285px;
+    right:255px;
+  }
+  .washington_pin{
+    top: 180px;
+    right: 235px;
+  }
+  .detroit_pin{
+    top: 125px;
+    right: 240px;
+  }
+  .dallas_pin{
+    top:215px;
+    right:415px;
+  }
+  .bay_pin{
+    top: 160px;
+    right: 575px;
+  } 
+} 
+
+@media (min-width: 1290px) {
+  .nashville_pin{
+    top: 170px;
+    right: 335px;
+  }
+  .chattanooga_pin{
+    top: 190px;
+    right: 310px;
+  }
+  .knoxville_pin{
+    top: 170px;
+    right: 280px;
+  }
+  .birmingham_pin{
+    top: 215px;
+    right:335px;
+  }
+  .atlanta_pin{
+    top: 215px;
+    right: 285px;
+  }
+  .florida_pin{
+    top:270px;
+    right: 300px;
+  }
+  .bahama_pin{
+    top:290px;
+    right:265px;
+  }
+  .washington_pin{
+    top: 185px;
+    right: 245px;
+  }
+  .detroit_pin{
+    top: 130px;
+    right: 250px;
+  }
+  .dallas_pin{
+    top:225px;
+    right:430px;
+  }
+  .bay_pin{
+    top: 165px;
+    right: 595px;
+  } 
+} 
+@media (min-width: 1330px) {
+  .nashville_pin{
+    top: 180px;
+    right: 355px;
+  }
+  .chattanooga_pin{
+    height: 40px;
+    width: 40px;
+    top: 200px;
+    right: 320px;
+  }
+  .knoxville_pin{
+    top: 180px;
+    right: 295px;
+  }
+  .birmingham_pin{
+    top: 235px;
+    right:355px;
+  }
+  .atlanta_pin{
+    top: 230px;
+    right: 300px;
+  }
+  .florida_pin{
+    height: 40px;
+    width: 40px;
+    top:280px;
+    right: 315px;
+  }
+  .bahama_pin{
+    top:315px;
+    right:280px;
+  }
+  .washington_pin{
+    top: 200px;
+    right: 260px;
+  }
+  .detroit_pin{
+    top: 135px;
+    right: 260px;
+  }
+  .dallas_pin{
+    top:240px;
+    right:455px;
+  }
+  .bay_pin{
+    top: 180px;
+    right: 630px;
+  } 
+}
+
+@media (min-width: 1400px) {
+  .consultantOnMap{height: 40px;width: 40px;}
+  .nashville_pin{
+    top: 185px;
+    right: 360px;
+  }
+  .chattanooga_pin{
+    height: 45px;
+    width: 45px;
+    top: 205px;
+    right: 330px;
+  }
+  .knoxville_pin{
+    top: 185px;
+    right: 300px;
+  }
+  .birmingham_pin{
+    top: 240px;
+    right:360px;
+  }
+  .atlanta_pin{
+    top: 235px;
+    right: 305px;
+  }
+  .florida_pin{
+    height: 45px;
+    width: 45px;
+    top:285px;
+    right: 320px;
+  }
+  .bahama_pin{
+    top:320px;
+    right:285px;
+  }
+  .washington_pin{
+    top: 205px;
+    right: 260px;
+  }
+  .detroit_pin{
+    top: 140px;
+    right: 265px;
+  }
+  .dallas_pin{
+    top:245px;
+    right:465px;
+  }
+  .bay_pin{
+    height: 55px;
+    width: 55px;
+    top: 185px;
+    right: 645px;
+  } 
+} 
+
+@media (min-width: 1445px) {
+  .consultantOnMap{height: 40px;width: 40px;}
+  .nashville_pin{
+    top: 190px;
+    right: 375px;
+  }
+  .chattanooga_pin{
+    height: 45px;
+    width: 45px;
+    top: 210px;
+    right: 340px;
+  }
+  .knoxville_pin{
+    top: 190px;
+    right: 310px;
+  }
+  .birmingham_pin{
+    top: 250px;
+    right:375px;
+  }
+  .atlanta_pin{
+    top: 245px;
+    right: 315px;
+  }
+  .florida_pin{
+    height: 45px;
+    width: 45px;
+    top:300px;
+    right: 330px;
+  }
+  .bahama_pin{
+    top:335px;
+    right:295px;
+  }
+  .washington_pin{
+    top: 215px;
+    right: 270px;
+  }
+  .detroit_pin{
+    top: 145px;
+    right: 275px;
+  }
+  .dallas_pin{
+    height: 45px;
+    width: 45px;
+    top:255px;
+    right:480px;
+  }
+  .bay_pin{
+    height: 55px;
+    width: 55px;
+    top: 190px;
+    right: 670px;
+  } 
+} 
+
+@media (min-width: 1490px) {
+  .nashville_pin{
+    top: 195px;
+    right: 385px;
+  }
+  .chattanooga_pin{
+    height: 50px;
+    width: 50px;
+    top: 215px;
+    right: 350px;
+  }
+  .knoxville_pin{
+    top: 195px;
+    right: 320px;
+  }
+  .birmingham_pin{
+    top: 255px;
+    right:385px;
+  }
+  .atlanta_pin{
+    top: 250px;
+    right: 325px;
+  }
+  .florida_pin{
+    height: 50px;
+    width: 50px;
+    top:305px;
+    right: 335px;
+  }
+  .bahama_pin{
+    top:345px;
+    right:305px;
+  }
+  .washington_pin{
+    top: 220px;
+    right: 275px;
+  }
+  .detroit_pin{
+    top: 145px;
+    right: 285px;
+  }
+  .dallas_pin{
+    top:260px;
+    right:495px;
+  }
+  .bay_pin{
+    height: 55px;
+    width: 55px;
+    top: 195px;
+    right: 695px;
+  } 
+} 
+
+@media (min-width: 1540px) {
+  .consultantOnMap{height: 45px;width: 45px;}
+  .nashville_pin{
+    top: 205px;
+    right: 400px;
+  }
+  .chattanooga_pin{
+    height: 55px;
+    width: 55px;
+    top: 225px;
+    right: 360px;
+  }
+  .knoxville_pin{
+    top: 205px;
+    right: 330px;
+  }
+  .birmingham_pin{
+    top: 265px;
+    right:400px;
+  }
+  .atlanta_pin{
+    top: 260px;
+    right: 340px;
+  }
+  .florida_pin{
+    height:55px;
+    width: 55px;
+    top:310px;
+    right: 350px;
+  }
+  .bahama_pin{
+    top:355px;
+    right:315px;
+  }
+  .washington_pin{
+    top: 225px;
+    right: 290px;
+  }
+  .detroit_pin{
+    top: 155px;
+    right: 295px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:270px;
+    right:510px;
+  }
+  .bay_pin{
+    height: 65px;
+    width: 65px;
+    top: 205px;
+    right: 735px;
+  } 
+}
+
+@media (min-width: 1600px) {
+  .consultantOnMap{height: 45px;width: 45px;}
+  .nashville_pin{
+    top: 210px;
+    right: 420px;
+  }
+  .chattanooga_pin{
+    height: 55px;
+    width: 55px;
+    top: 235px;
+    right: 380px;
+  }
+  .knoxville_pin{
+    top: 215px;
+    right: 345px;
+  }
+  .birmingham_pin{
+    top: 275px;
+    right:420px;
+  }
+  .atlanta_pin{
+    top: 270px;
+    right: 355px;
+  }
+  .florida_pin{
+    height:55px;
+    width: 55px;
+    top:330px;
+    right: 365px;
+  }
+  .bahama_pin{
+    top:370px;
+    right:330px;
+  }
+  .washington_pin{
+    top: 235px;
+    right: 300px;
+  }
+  .detroit_pin{
+    top: 160px;
+    right: 305px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:275px;
+    right:530px;
+  }
+  .bay_pin{
+    height: 65px;
+    width: 65px;
+    top: 205px;
+    right: 750px;
+  } 
+}
+
+
+@media (min-width: 1650px) { 
+  .consultantOnMap{height: 45px;width: 45px;}
+  .nashville_pin{
+    top: 220px;
+    right: 430px;
+  }
+  .chattanooga_pin{
+    height: 55px;
+    width: 55px;
+    top: 240px;
+    right: 390px;
+  }
+  .knoxville_pin{
+    top: 223px;
+    right: 358px;
+  }
+  .birmingham_pin{
+    top: 285px;
+    right:435px;
+  }
+  .atlanta_pin{
+    top: 284px;
+    right: 365px;
+  }
+  .florida_pin{
+    height:55px;
+    width: 55px;
+    top:340px;
+    right: 380px;
+  }
+  .bahama_pin{
+    top:380px;
+    right:340px;
+  }
+  .washington_pin{
+    top: 245px;
+    right: 315px;
+  }
+  .detroit_pin{
+    top: 165px;
+    right: 320px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:285px;
+    right:550px;
+  }
+  .bay_pin{
+    height: 65px;
+    width: 65px;
+    top: 215px;
+    right: 770px;
+  } 
+}
+
+@media (min-width: 1700px) { 
+  .consultantOnMap{height: 45px;width: 45px;}
+  .nashville_pin{
+    top: 230px;
+    right: 445px;
+  }
+  .chattanooga_pin{
+    height: 55px;
+    width: 55px;
+    top: 247px;
+    right: 404px;
+  }
+  .knoxville_pin{
+    top: 230px;
+    right: 370px;
+  }
+  .birmingham_pin{
+    top: 295px;
+    right:445px;
+  }
+  .atlanta_pin{
+    top: 290px;
+    right: 377px;
+  }
+  .florida_pin{
+    height:55px;
+    width: 55px;
+    top:355px;
+    right: 395px;
+  }
+  .bahama_pin{
+    top:400px;
+    right:350px;
+  }
+  .washington_pin{
+    top: 250px;
+    right: 325px;
+  }
+  .detroit_pin{
+    top: 175px;
+    right: 330px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:297px;
+    right:570px;
+  }
+  .bay_pin{
+    height: 70px;
+    width: 70px;
+    top: 225px;
+    right: 795px;
+  } 
+}
+
+
+@media (min-width: 1750px) { 
+  .consultantOnMap{height: 45px;width: 45px;}
+  .nashville_pin{
+    top: 230px;
+    right: 460px;
+  }
+  .chattanooga_pin{
+    height: 55px;
+    width: 55px;
+    top: 255px;
+    right: 415px;
+  }
+  .knoxville_pin{
+    top: 235px;
+    right: 380px;
+  }
+  .birmingham_pin{
+    top: 300px;
+    right:460px;
+  }
+  .atlanta_pin{
+    top: 295px;
+    right: 390px;
+  }
+  .florida_pin{
+    height:55px;
+    width: 55px;
+    top:360px;
+    right: 405px;
+  }
+  .bahama_pin{
+    top:405px;
+    right:360px;
+  }
+  .washington_pin{
+    top: 255px;
+    right: 330px;
+  }
+  .detroit_pin{
+    top: 180px;
+    right: 335px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:307px;
+    right:587px;
+  }
+  .bay_pin{
+    height: 70px;
+    width: 70px;
+    top: 230px;
+    right: 815px;
+  } 
+}
+
+@media (min-width: 1800px) { 
+  .consultantOnMap{height: 50px;width: 50px;}
+  .nashville_pin{
+    top: 235px;
+    right: 470px;
+  }
+  .chattanooga_pin{
+    height: 60px;
+    width: 60px;
+    top: 260px;
+    right: 427px;
+  }
+  .knoxville_pin{
+    top: 240px;
+    right: 390px;
+  }
+  .birmingham_pin{
+    top: 310px;
+    right:470px;
+  }
+  .atlanta_pin{
+    top: 306px;
+    right: 400px;
+  }
+  .florida_pin{
+    height:60px;
+    width: 60px;
+    top:375px;
+    right: 417px;
+  }
+  .bahama_pin{
+    top:420px;
+    right:375px;
+  }
+  .washington_pin{
+    top: 270px;
+    right: 340px;
+  }
+  .detroit_pin{
+    top: 182px;
+    right: 350px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:315px;
+    right:605px;
+  }
+  .bay_pin{
+    height: 73px;
+    width: 73px;
+    top: 236px;
+    right: 840px;
+  } 
+}
+
+@media (min-width: 1860px) { 
+  .consultantOnMap{height: 50px;width: 50px;}
+  .nashville_pin{
+    top: 245px;
+    right: 485px;
+  }
+  .chattanooga_pin{
+    height: 60px;
+    width: 60px;
+    top: 270px;
+    right: 440px;
+  }
+  .knoxville_pin{
+    top: 248px;
+    right: 400px;
+  }
+  .birmingham_pin{
+    top: 320px;
+    right:485px;
+  }
+  .atlanta_pin{
+    top: 315px;
+    right: 410px;
+  }
+  .florida_pin{
+    height:60px;
+    width: 60px;
+    top:383px;
+    right: 427px;
+  }
+  .bahama_pin{
+    top:430px;
+    right:385px;
+  }
+  .washington_pin{
+    top: 275px;
+    right: 350px;
+  }
+  .detroit_pin{
+    top: 186px;
+    right: 360px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:325px;
+    right:620px;
+  }
+  .bay_pin{
+    height: 73px;
+    width: 73px;
+    top: 245px;
+    right: 865px;
+  } 
+}
+
+@media (min-width: 1900px) { 
+  .consultantOnMap{height: 55px;width: 55px;}
+  .nashville_pin{
+    top: 250px;
+    right: 495px;
+  }
+  .chattanooga_pin{
+    height: 60px;
+    width: 60px;
+    top: 280px;
+    right: 450px;
+  }
+  .knoxville_pin{
+    top: 250px;
+    right: 410px;
+  }
+  .birmingham_pin{
+    top: 327px;
+    right:496px;
+  }
+  .atlanta_pin{
+    top: 320px;
+    right: 420px;
+  }
+  .florida_pin{
+    height:60px;
+    width: 60px;
+    top:395px;
+    right: 435px;
+  }
+  .bahama_pin{
+    top:440px;
+    right:390px;
+  }
+  .washington_pin{
+    top: 278px;
+    right: 357px;
+  }
+  .detroit_pin{
+    top: 190px;
+    right: 365px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:335px;
+    right:636px;
+  }
+  .bay_pin{
+    height: 77px;
+    width: 77px;
+    top: 246px;
+    right: 885px;
+  } 
+}
+@media (min-width: 1950px) { 
+  .consultantOnMap{height: 55px;width: 55px;}
+  .nashville_pin{
+    top: 260px;
+    right: 510px;
+  }
+  .chattanooga_pin{
+    height: 60px;
+    width: 60px;
+    top: 287px;
+    right: 463px;
+  }
+  .knoxville_pin{
+    top: 260px;
+    right: 420px;
+  }
+  .birmingham_pin{
+    top: 335px;
+    right:510px;
+  }
+  .atlanta_pin{
+    top: 330px;
+    right: 430px;
+  }
+  .florida_pin{
+    height:60px;
+    width: 60px;
+    top:405px;
+    right: 450px;
+  }
+  .bahama_pin{
+    top:455px;
+    right:400px;
+  }
+  .washington_pin{
+    top: 285px;
+    right: 370px;
+  }
+  .detroit_pin{
+    top: 195px;
+    right: 375px;
+  }
+  .dallas_pin{
+    height:55px;
+    width: 55px;
+    top:345px;
+    right:656px;
+  }
+  .bay_pin{
+    height: 77px;
+    width: 77px;
+    top: 255px;
+    right: 905px;
+  } 
+}
+
+@media (min-width: 2015px) { 
+  .consultantOnMap{height: 55px;width: 55px;}
+  .nashville_pin{
+    top: 270px;
+    right: 530px;
+  }
+  .chattanooga_pin{
+    height: 65px;
+    width: 65px;
+    top: 295px;
+    right: 480px;
+  }
+  .knoxville_pin{
+    top: 271px;
+    right: 436px;
+  }
+  .birmingham_pin{
+    top: 350px;
+    right:530px;
+  }
+  .atlanta_pin{
+    top: 345px;
+    right: 448px;
+  }
+  .florida_pin{
+    height:65px;
+    width: 65px;
+    top:420px;
+    right: 470px;
+  }
+  .bahama_pin{
+    top:470px;
+    right:420px;
+  }
+  .washington_pin{
+    top: 300px;
+    right: 385px;
+  }
+  .detroit_pin{
+    top: 202px;
+    right: 390px;
+  }
+  .dallas_pin{
+    height:60px;
+    width: 60px;
+    top:355px;
+    right:680px;
+  }
+  .bay_pin{
+    height: 85px;
+    width: 85px;
+    top: 265px;
+    right: 945px;
+  } 
+}
+@media (min-width: 2100px) { 
+  .consultantOnMap{height: 55px;width: 55px;}
+  .nashville_pin{
+    top: 280px;
+    right: 550px;
+  }
+  .chattanooga_pin{
+    height: 65px;
+    width: 65px;
+    top: 305px;
+    right: 500px;
+  }
+  .knoxville_pin{
+    top: 280px;
+    right: 455px;
+  }
+  .birmingham_pin{
+    top: 360px;
+    right:550px;
+  }
+  .atlanta_pin{
+    top: 355px;
+    right: 470px;
+  }
+  .florida_pin{
+    height:65px;
+    width: 65px;
+    top:440px;
+    right: 490px;
+  }
+  .bahama_pin{
+    top:490px;
+    right:435px;
+  }
+  .washington_pin{
+    top: 315px;
+    right: 400px;
+  }
+  .detroit_pin{
+    top: 210px;
+    right: 407px;
+  }
+  .dallas_pin{
+    height:60px;
+    width: 60px;
+    top:370px;
+    right:705px;
+  }
+  .bay_pin{
+    height: 85px;
+    width: 85px;
+    top: 275px;
+    right: 980px;
+  } 
+}
+@media (min-width: 2189px) { 
+  .consultantOnMap{height: 60px;width: 60px;}
+  .nashville_pin{
+    top: 290px;
+    right: 575px;
+  }
+  .chattanooga_pin{
+    height: 70px;
+    width: 70px;
+    top: 325px;
+    right: 520px;
+  }
+  .knoxville_pin{
+    top: 290px;
+    right: 475px;
+  }
+  .birmingham_pin{
+    top: 380px;
+    right:578px;
+  }
+  .atlanta_pin{
+    top: 375px;
+    right: 490px;
+  }
+  .florida_pin{
+    height:70px;
+    width: 70px;
+    top:460px;
+    right: 510px;
+  }
+  .bahama_pin{
+    top:510px;
+    right:455px;
+  }
+  .washington_pin{
+    top: 315px;
+    right: 420px;
+  }
+  .detroit_pin{
+    top: 225px;
+    right: 425px;
+  }
+  .dallas_pin{
+    height:65px;
+    width: 65px;
+    top:390px;
+    right:740px;
+  }
+  .bay_pin{
+    height: 85px;
+    width: 85px;
+    top: 290px;
+    right: 1030px;
+  } 
+}
+@media (min-width: 2285px) { 
+  .consultantOnMap{height: 70px;width: 70px;}
+  .nashville_pin{
+    top: 305px;
+    right: 600px;
+  }
+  .chattanooga_pin{
+    height: 75px;
+    width: 75px;
+    top: 340px;
+    right: 540px;
+  }
+  .knoxville_pin{
+    top: 305px;
+    right: 495px;
+  }
+  .birmingham_pin{
+    top: 395px;
+    right:600px;
+  }
+  .atlanta_pin{
+    top: 390px;
+    right: 505px;
+  }
+  .florida_pin{
+    height:75px;
+    width: 75px;
+    top:475px;
+    right: 530px;
+  }
+  .bahama_pin{
+    top:535px;
+    right:470px;
+  }
+  .washington_pin{
+    top: 345px;
+    right: 438px;
+  }
+  .detroit_pin{
+    top: 230px;
+    right: 445px;
+  }
+  .dallas_pin{
+    height:65px;
+    width: 65px;
+    top:405px;
+    right:775px;
+  }
+  .bay_pin{
+    height: 85px;
+    width: 85px;
+    top: 290px;
+    right: 1065px;
+  } 
+}
+@media (min-width: 2400px) { 
+ .mapSection{
+  visibility: hidden;
+  height: 0;
+ }
+}
+
+@media (min-width: 768px) {
+  .modal__content--active{
+    width: 87% !important;
+    margin: 10% auto;
+  }
+  .mapEntityConsultant{
+    width: 85%;
+    margin: 0 auto;
+  }
+  .mapEntityPinPoint{
+    width: 50px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .nextToMap{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nextToMapIcons{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+@media (min-width: 875px) {
+  .modal__content--active{
+    width: 80% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 992px) { 
+  .modal__content--active{
+    width: 70% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    padding-top: 193px;
+  }
+}
+
+@media (min-width: 1100px) { 
+  .modal__content--active{
+    width: 65% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    padding-top: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal__content--active{
+    width: 60% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    padding-top: 0px;
+  }
+  .nextToMapIcons{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1300px) {
+  .modal__content--active{
+    width: 55% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    padding-top: 0px;
+    height: 475px;
+  }
+  .nextToMapIcons{
+    width: 75%;
+  }
+}
+@media (min-width: 1400px) {
+  .modal__content--active{
+    width: 50% !important;
+    margin: 10% auto;
+  }
+  .nextToMapIcons{
+    width: 60%;
+    margin-left: 0px;
+    justify-content: space-between
+  }
+
+}
+@media (min-width: 1500px) {
+  .modal__content--active{
+    width: 45% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    height: 525px;
+  }
+}
+@media (min-width: 1650px) {
+  .modal__content--active{
+    width: 40% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    height: 570px;
+  }
+}
+
+@media (min-width: 1875px) {
+  .modal__content--active{
+    width: 35% !important;
+    margin: 10% auto;
+  }
+  .nextToMap{
+    height: 755px;
+  }
+}
+@media (min-width: 2300px) {
+  .modal__content--active{
+    width: 30% !important;
+    margin: 10% auto;
+  }
+}
