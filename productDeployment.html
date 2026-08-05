@@ -1,568 +1,213 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--  -->
-        <!--    Document Title-->
-        <!-- =============================================-->
-        <title>Twin Pick Rack | Product Deployment</title>
-        <!--  -->
-        <!-- Open Graph -->
-        <meta property="og:title" content="Twin Pick Rack | Product Deployment">
-        <meta property="og:description" content="Installation planning, project coordination, WCS integration, automation deployment, and commissioning services for warehouse infrastructure.">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="assets/images/logos/twinPickRack.png">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Pick Racks | Product Deployment</title>
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Twin Pick Rack | Product Deployment">
-        <meta name="twitter:description" content="Installation planning, project coordination, WCS integration, automation deployment, and commissioning services for warehouse infrastructure.">
-        <meta name="twitter:image" content="assets/images/logos/twinPickRack.png">
-        <!--    Favicons-->
-        <!--    =============================================-->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logos/twinPickRack.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/twinPickRack.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logos/twinPickRack.png">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/images/logos/twinPickRack.png">
-        <link rel="manifest" href="https://bennettdierckman.github.io/Twinlode/assets/images/favicons/manifest.json">
-        <!-- safaripinnedtab -->
-        <link rel="mask-icon" href="assets/images/logos/twinPickRack.png" color="#5bbad5">
-        <meta name="msapplication-TileImage" content="assets/images/logos/twinPickRack.png">
-        <meta name="theme-color" content="#ffffff">
-        <!--  -->
-        <!--    Stylesheets-->
-        <!--    =============================================-->
-        <!-- Default stylesheets-->
-        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Template specific stylesheets-->
-        <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
-        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-        <link href="assets/lib/hamburgers/dist/hamburgers.min.css" rel="stylesheet">
-        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
-        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
-        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-        <link href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet">
-        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
-        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
-        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-        <link href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet">
-        <!-- Main stylesheet and color file-->
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet"> 
-    </head>
-    <body data-spy="scroll" data-target=".inner-link" data-offset="60" class="background-10">
-        <main>
-            <!-- <div class="loading" id="preloader">
-                <div class="loader h-100 d-flex align-items-center justify-content-center">
-                    <div class="background-white radius-secondary goodGifLoader">
-                        <div class="twinlode-loader-mark">Twinlode</div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="sticky-top">
-                <section class="background-primary d-none d-sm-block" style=" padding: .75%;">
-                    <div class="container">
-                        <div class="row align-items-center d-flex-end">
-                            <div class="col-auto">
-                                <div style="opacity: 1;">
-                                    <span class="fa fa-send-o color-warning fw-800 icon-position-fix"></span>
-                                    <a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="mailto:info@twinpickrack.com">info@twinpickrack.com </a><span class="text-white">&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-                                    <span class="fa fa-phone color-warning fw-800 icon-position-fix"></span>
-                                    <a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="tel:+14085059790">+1 (408) 505-9770</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.row-->
-                    </div>
-                    <!--/.container-->
-                </section>
-                <div class="znav-white znav-container navbar-elixir" id="znav-container">
-                    <div class="container navigation pt-1 pb-0 py-lg-2">
-                        <nav class="navbar navbar-expand-lg pb-0 pt-0">
-                            <a class="navbar-brand  pl-1 pt-0 pr-1" href="index.html">
-                                <img src="assets/images/logos/twinPickRack.png">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <div class="hamburger hamburger--emphatic">
-                                    <div class="hamburger-box">
-                                        <div class="hamburger-inner"></div>
-                                    </div>
-                                </div>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                                <ul class="navbar-nav fs-0 fw-700 ml-auto">
-                                    <li>
-                                        <a class="d-block" href="index.html">Home</a>
-                                    </li>
-                                    <li class="mr-lg-2">
-                                        <a href="https://bennettdierckman.github.io/Twinlode/solutions.html">Solutions</a>
-                                        <ul class="dropdown fs--1">
-                                            <li><a href="storageSystems.html">Storage Systems</a></li>
-                                            <li><a href="conveyorSystems.html">Conveyors &amp; Transport</a></li>
-                                            <li><a href="mezzanineSystems.html">Mezzanines &amp; Platforms</a></li>
-                                            <li><a href="accessSystems.html">Access &amp; Control</a></li>
-                                            <li><a href="safetySystems.html">Warehouse Safety</a></li>
-                                            <li><a href="productDeployment.html">Product Deployment</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <section class="pageHeader storage-hero">
-                <div class="storage-hero-inner">
-                    <div class="background-holder background-fixed-sometimes"
-                         style="background-image:url(assets/images/blueprint_BG3.png);"
-                         aria-hidden="true"></div>
+<meta property="og:title" content="Twin Pick Racks | Warehouse Stack Solutions">
+<meta property="og:description" content="Warehouse infrastructure planning, pallet rack systems, mezzanines, material handling, and warehouse safety solutions.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/logos/twinPickRacks.jpg">
 
-                    <div class="storage-hero-shade" aria-hidden="true"></div>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Twin Pick Racks | Warehouse Stack Solutions">
+<meta name="twitter:description" content="Warehouse infrastructure planning, pallet rack systems, mezzanines, material handling, and warehouse safety solutions.">
+<meta name="twitter:image" content="assets/images/logos/twinPickRacks.jpg">
 
-                    <div class="container storage-hero-content">
-                        <div class="row pt-6 storage-hero-row" data-inertia='{"weight":1.5}'>
-                            <div class="col-lg-8 px-md-0 color-white" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                                <div class="overflow-hidden">
-                                    <!-- <nav class="storage-breadcrumb zopacity" data-zanim='{"delay":0}' aria-label="Breadcrumb">
-                                        <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="solutions.html">Solutions</a><span aria-hidden="true">/</span><span>Product Deployment</span>
-                                    </nav> -->
-                                    <span class="storage-eyebrow zopacity" data-zanim='{"delay":0.03}'>Product Deployment</span>
-                                    <h1 class="color-white fs-4 fs-md-5 mb-3 zopacity" data-zanim='{"delay":0.05}'>Product Deployment Solutions</h1>
-                                    <p class="storage-hero-copy zopacity" data-zanim='{"delay":0.1}'>
-                                        Bring your warehouse project to life with professional installation, project management, equipment integration, and commissioning services. Twin Pick Rack helps coordinate every stage of deployment to ensure your storage systems, conveyors, mezzanines, and warehouse infrastructure are installed safely, on schedule, and ready for operation.
-                                    </p>
-                                    <div class="mt-4 zopacity" data-zanim='{"delay":0.15}'>
-                                        <a class="btn btn-twinlode-outline btn-capsule border-2x fw-700 mr-2 mb-2" href="contact.html">Schedule a Deployment Consultation</a>
-                                        <a class="btn btn-outline-white btn-capsule border-2x fw-700 mb-2" href="productDeployment.html#deployment-solutions">View Services</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/logos/twinPickRacks.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/twinPickRacks.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/logos/twinPickRacks.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/logos/twinPickRacks.jpg">
+<meta name="theme-color" content="#132A46">
 
-            <section class="storage-intro py-5 py-lg-6">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 pr-lg-5">
-                            <span class="section-kicker">Product Deployment Solutions</span>
-                            <h2>From Installation to Operational Success.</h2>
-                            <p class="lead">Successful warehouse projects depend on more than quality equipment. Proper planning, coordination, installation, and commissioning ensure every system performs safely and efficiently from day one.</p>
-                            <p>Twin Pick Rack works with experienced installation and deployment partners to coordinate every phase of implementation, including pallet rack, conveyors, mezzanines, warehouse safety systems, and supporting infrastructure. We help streamline complex projects by managing schedules, coordinating trades, and ensuring equipment is installed according to manufacturer specifications and project requirements.</p>
-                            <p>Whether launching a new distribution center, expanding an existing facility, or relocating warehouse operations, every deployment strategy is tailored to your operational goals, project timeline, facility constraints, and long-term growth plans.</p>
-                        </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="assets/css/site.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-                        <div class="col-lg-5 mt-4 mt-lg-0">
-                            <div class="storage-checklist">
-                                <h4>What We Evaluate</h4>
-                                <ul>
-                                    <li>Project scope, installation sequencing, and overall deployment schedule</li>
-                                    <li>Equipment coordination, site readiness, and facility access requirements</li>
-                                    <li>Safety planning, OSHA compliance, and jobsite risk management</li>
-                                    <li>Contractor coordination, logistics, and material delivery schedules</li>
-                                    <li>System integration, startup, testing, and commissioning requirements</li>
-                                    <li>Future expansion, phased implementation, and long-term operational objectives</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<div class="topbar">
+  <div class="container">
+    <a href="mailto:info@twinpickrack.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>info@twinpickrack.com</a>
+    <a href="#" aria-label="Twin Pick Racks on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 10h4v10H5zM12 10h4v1.5c.6-1 1.7-1.7 3.2-1.7 3.4 0 4.3 2.2 4.3 5V20h-4v-4.5c0-1.1 0-2.5-1.5-2.5s-1.7 1.2-1.7 2.4V20h-4z"/></svg></a>
+    <a href="tel:+14085059790"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>+1 (408) 505-9770</a>
+  </div>
+</div>
 
-            <section id="deployment-solutions" class="storage-solutions-section py-5 py-lg-6">
-                <div class="container">
-                    <div class="row justify-content-center text-center mb-5">
-                        <div class="col-lg-8">
-                            <span class="section-kicker">Product Deployment Solutions</span>
-                            <h2>From Project Kickoff to Going Live</h2>
-                            <p class="lead mb-0">
-                                Every warehouse deployment requires careful planning, precise coordination, and expert execution. Twin Pick Rack helps manage installation, equipment integration, project scheduling, and system commissioning to ensure your warehouse infrastructure is deployed safely, efficiently, and ready to perform from day one.
-                            </p>
-                        </div>
-                    </div>
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="index.html"><img src="assets/images/logos/twinPickRacks.jpg" alt="Twin Pick Racks"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="index.html#services">Solutions<span class="nav-caret"></span></a>
+          <ul class="dropdown">
+            <li><a href="storageSystems.html">Storage Systems</a></li>
+            <li><a href="conveyorSystems.html">Conveyors &amp; Transport</a></li>
+            <li><a href="mezzanineSystems.html">Mezzanines &amp; Platforms</a></li>
+            <li><a href="accessSystems.html">Access &amp; Control</a></li>
+            <li><a href="safetySystems.html">Warehouse Safety</a></li>
+            <li><a href="productDeployment.html">Product Deployment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="nav-scrim"></div>
 
-                    <div class="storage-system-list">
-                        <article class="storage-system-card">
-                            <div class="storage-system-image"><img src="assets/images/conveyor-mezzanine-pallateRack.jpg" alt="Integrated warehouse infrastructure"></div>
-                            <div class="storage-system-content"><span class="system-number">01</span><h3>Warehouse Implementation Planning</h3><p>A successful deployment starts with a well-defined plan. Twin Pick Rack helps evaluate operational requirements, project scope, facility constraints, timelines, and resource needs to develop an implementation strategy that supports efficient execution and minimizes disruption.</p></div>
-                        </article>
-                        <article class="storage-system-card storage-system-card-reverse">
-                            <div class="storage-system-image"><img src="assets/images/Woman-masked-warehouse.png" alt="Warehouse project coordination"></div>
-                            <div class="storage-system-content"><span class="system-number">02</span><h3>Project Coordination</h3><p>Complex warehouse projects involve multiple vendors, contractors, and internal teams. Twin Pick Rack helps coordinate schedules, communication, and project milestones to keep every phase aligned and moving toward a successful completion.</p></div>
-                        </article>
-                        <article class="storage-system-card">
-                            <div class="storage-system-image"><img src="assets/images/CSM_Conveyor.jpg" alt="Automated warehouse control system"></div>
-                            <div class="storage-system-content"><span class="system-number">03</span><h3>Warehouse Control System (WCS) Integration</h3><p>Warehouse Control Systems connect automation equipment into a unified operation. Twin Pick Rack helps evaluate WCS solutions that improve equipment communication, optimize material flow, enhance operational visibility, and support long-term system performance.</p></div>
-                        </article>
-                        <article class="storage-system-card storage-system-card-reverse">
-                            <div class="storage-system-image"><img src="assets/images/productDeployment/productDeployment_modal.jpeg" alt="Automated warehouse system deployment"></div>
-                            <div class="storage-system-content"><span class="system-number">04</span><h3>Automation Deployment</h3><p>Deploying automation requires careful planning and seamless integration. Twin Pick Rack helps identify deployment strategies that align conveyors, storage systems, controls, and software into a cohesive solution designed to improve productivity and operational efficiency.</p></div>
-                        </article>
-                        <article class="storage-system-card">
-                            <div class="storage-system-image"><img src="assets/images/conveyor-mezzanine-pallateRack.jpg" alt="Warehouse system testing and commissioning"></div>
-                            <div class="storage-system-content"><span class="system-number">05</span><h3>System Testing &amp; Commissioning</h3><p>Before operations begin, every system should be thoroughly validated. Twin Pick Rack supports testing and commissioning efforts to verify equipment performance, control functionality, system integration, and overall operational readiness before production starts.</p></div>
-                        </article>
-                        <article class="storage-system-card storage-system-card-reverse">
-                            <div class="storage-system-image"><img src="assets/images/Woman-masked-warehouse.png" alt="Warehouse operational readiness"></div>
-                            <div class="storage-system-content"><span class="system-number">06</span><h3>Operational Readiness</h3><p>Technology is only effective when people and processes are prepared. Twin Pick Rack helps organizations develop implementation plans, documentation, training strategies, and startup procedures that support a smooth transition into daily operations.</p></div>
-                        </article>
-                        <article class="storage-system-card">
-                            <div class="storage-system-image"><img src="assets/images/CSM_Conveyor.jpg" alt="Warehouse performance optimization"></div>
-                            <div class="storage-system-content"><span class="system-number">07</span><h3>Performance Optimization</h3><p>Deployment is only the beginning. Twin Pick Rack evaluates system performance after implementation to identify opportunities for improved throughput, equipment utilization, workflow efficiency, and long-term operational success.</p></div>
-                        </article>
-                        <article class="storage-system-card storage-system-card-reverse">
-                            <div class="storage-system-image"><img src="assets/images/productDeployment/productDeployment_modal.jpeg" alt="Scalable warehouse deployment"></div>
-                            <div class="storage-system-content"><span class="system-number">08</span><h3>Scalable Deployment Solutions</h3><p>Warehouse operations continue to evolve as businesses grow. Twin Pick Rack helps identify flexible deployment strategies that support future expansion, additional automation, changing product mixes, and evolving operational requirements without unnecessary disruption.</p></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
+<main id="main">
 
-            <section class="storage-process py-5 py-lg-6">
-                <div class="container">
-                    <div class="row align-items-end mb-4">
-                        <div class="col-lg-7">
-                            <span class="section-kicker">The Twin Pick Rack Approach</span>
-                            <h2 class="mb-lg-0">From Project Planning to Operational Success</h2>
-                        </div>
-                        <div class="col-lg-5">
-                            <p class="mb-0">Successful warehouse deployments require more than installing equipment. Twin Pick Rack helps organizations plan, coordinate, integrate, and optimize every phase of implementation to minimize disruption, accelerate startup, and deliver long-term operational performance.</p>
-                        </div>
-                    </div>
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url(assets/images/blueprint_BG3.png)"></div>
+    <div class="container page-hero-content">
+      <span class="hero-eyebrow">Installation &amp; Integration</span>
+      <h1>Product Deployment Solutions</h1>
+      <p>Bring your warehouse project to life with professional installation, project management, equipment integration, and commissioning services. Twin Pick Racks helps coordinate every stage of deployment to ensure your storage systems, conveyors, mezzanines, and warehouse infrastructure are installed safely, on schedule, and ready for operation.</p>
+      <div class="hero-actions">
+        <a class="btn btn-signal" href="mailto:info@twinpickrack.com">Schedule a Deployment Consultation</a>
+        <a class="btn btn-outline-light" href="#solutions">Explore Services</a>
+      </div>
+    </div>
+  </section>
 
-                    <div class="row">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <div class="process-step">
-                                <span>1</span>
-                                <h4>Plan</h4>
-                                <p>Evaluate operational requirements, project objectives, facility constraints, implementation timelines, and resource needs to develop a deployment strategy that supports a successful rollout.</p>
-                            </div>
-                        </div>
+  <section>
+    <div class="container grid grid-2">
+      <div class="reveal">
+        <span class="kicker">Product Deployment Solutions</span>
+        <h2>From Installation to Operational Success.</h2>
+        <p class="lead">Successful warehouse projects depend on more than quality equipment. Proper planning, coordination, installation, and commissioning ensure every system performs safely and efficiently from day one.</p>
+        <p>Twin Pick Racks works with experienced installation and deployment partners to coordinate every phase of implementation, including pallet rack, conveyors, mezzanines, warehouse safety systems, and supporting infrastructure. We help streamline complex projects by managing schedules, coordinating trades, and ensuring equipment is installed according to manufacturer specifications and project requirements.</p>
+        <p>Whether launching a new distribution center, expanding an existing facility, or relocating warehouse operations, every deployment strategy is tailored to your operational goals, project timeline, facility constraints, and long-term growth plans.</p>
+      </div>
+      <div class="reveal">
+        <div class="checklist-card">
+          <h4>What We Evaluate</h4>
+          <ul>
+            <li>Project scope, installation sequencing, and overall deployment schedule</li>
+            <li>Equipment coordination, site readiness, and facility access requirements</li>
+            <li>Safety planning, OSHA compliance, and jobsite risk management</li>
+            <li>Contractor coordination, logistics, and material delivery schedules</li>
+            <li>System integration, startup, testing, and commissioning requirements</li>
+            <li>Future expansion, phased implementation, and long-term operational objectives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <div class="process-step">
-                                <span>2</span>
-                                <h4>Coordinate</h4>
-                                <p>Work with manufacturers, contractors, software providers, and internal stakeholders to align schedules, integrate technologies, and keep every phase of the project moving forward efficiently.</p>
-                            </div>
-                        </div>
+  <section id="solutions" class="section-dim">
+    <div class="container">
+      <div class="text-center" style="max-width:760px; margin:0 auto 12px;">
+        <span class="kicker">Product Deployment Solutions</span>
+        <h2>From Project Kickoff to Going Live</h2>
+        <p class="lead">Every warehouse deployment requires careful planning, precise coordination, and expert execution. Twin Pick Racks helps manage installation, equipment integration, project scheduling, and system commissioning to ensure your warehouse infrastructure is deployed safely, efficiently, and ready to perform from day one.</p>
+      </div>
 
-                        <div class="col-md-4">
-                            <div class="process-step">
-                                <span>3</span>
-                                <h4>Deploy</h4>
-                                <p>Support system integration, commissioning, operational readiness, and performance optimization to help ensure your warehouse is prepared for reliable, scalable, and long-term success.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <div class="solution-row reveal">
+        <div class="solution-media"><img src="assets/images/conveyor-mezzanine-pallateRack.jpg" alt="Integrated warehouse infrastructure"></div>
+        <div class="solution-copy"><span class="solution-num">01</span><h3>Warehouse Implementation Planning</h3><p>A successful deployment starts with a well-defined plan. Twin Pick Racks helps evaluate operational requirements, project scope, facility constraints, timelines, and resource needs to develop an implementation strategy that supports efficient execution and minimizes disruption.</p></div>
+      </div>
+      <div class="solution-row is-reverse reveal">
+        <div class="solution-media"><img src="assets/images/Woman-masked-warehouse.png" alt="Warehouse project coordination"></div>
+        <div class="solution-copy"><span class="solution-num">02</span><h3>Project Coordination</h3><p>Complex warehouse projects involve multiple vendors, contractors, and internal teams. Twin Pick Racks helps coordinate schedules, communication, and project milestones to keep every phase aligned and moving toward a successful completion.</p></div>
+      </div>
+      <div class="solution-row reveal">
+        <div class="solution-media"><img src="assets/images/CSM_Conveyor.jpg" alt="Automated warehouse control system"></div>
+        <div class="solution-copy"><span class="solution-num">03</span><h3>Warehouse Control System (WCS) Integration</h3><p>Warehouse Control Systems connect automation equipment into a unified operation. Twin Pick Racks helps evaluate WCS solutions that improve equipment communication, optimize material flow, enhance operational visibility, and support long-term system performance.</p></div>
+      </div>
+      <div class="solution-row is-reverse reveal">
+        <div class="solution-media"><img src="assets/images/productDeployment/productDeployment_modal.jpeg" alt="Automated warehouse system deployment"></div>
+        <div class="solution-copy"><span class="solution-num">04</span><h3>Automation Deployment</h3><p>Deploying automation requires careful planning and seamless integration. Twin Pick Racks helps identify deployment strategies that align conveyors, storage systems, controls, and software into a cohesive solution designed to improve productivity and operational efficiency.</p></div>
+      </div>
+      <div class="solution-row reveal">
+        <div class="solution-media"><img src="assets/images/conveyor-mezzanine-pallateRack.jpg" alt="Warehouse system testing and commissioning"></div>
+        <div class="solution-copy"><span class="solution-num">05</span><h3>System Testing &amp; Commissioning</h3><p>Before operations begin, every system should be thoroughly validated. Twin Pick Racks supports testing and commissioning efforts to verify equipment performance, control functionality, system integration, and overall operational readiness before production starts.</p></div>
+      </div>
+      <div class="solution-row is-reverse reveal">
+        <div class="solution-media"><img src="assets/images/Woman-masked-warehouse.png" alt="Warehouse operational readiness"></div>
+        <div class="solution-copy"><span class="solution-num">06</span><h3>Operational Readiness</h3><p>Technology is only effective when people and processes are prepared. Twin Pick Racks helps organizations develop implementation plans, documentation, training strategies, and startup procedures that support a smooth transition into daily operations.</p></div>
+      </div>
+      <div class="solution-row reveal">
+        <div class="solution-media"><img src="assets/images/CSM_Conveyor.jpg" alt="Warehouse performance optimization"></div>
+        <div class="solution-copy"><span class="solution-num">07</span><h3>Performance Optimization</h3><p>Deployment is only the beginning. Twin Pick Racks evaluates system performance after implementation to identify opportunities for improved throughput, equipment utilization, workflow efficiency, and long-term operational success.</p></div>
+      </div>
+      <div class="solution-row is-reverse reveal">
+        <div class="solution-media"><img src="assets/images/productDeployment/productDeployment_modal.jpeg" alt="Scalable warehouse deployment"></div>
+        <div class="solution-copy"><span class="solution-num">08</span><h3>Scalable Deployment Solutions</h3><p>Warehouse operations continue to evolve as businesses grow. Twin Pick Racks helps identify flexible deployment strategies that support future expansion, additional automation, changing product mixes, and evolving operational requirements without unnecessary disruption.</p></div>
+      </div>
+    </div>
+  </section>
 
-            <section class="storage-cta">
-                <div class="container">
-                    <div class="storage-cta-panel">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <span class="section-kicker section-kicker-light">Plan With Confidence</span>
-                                <h2 class="color-white">Ready for a Successful Deployment?</h2>
-                                <p class="mb-lg-0">Whether you're implementing a new warehouse control system, deploying conveyor automation, coordinating multiple equipment vendors, or preparing a facility for operational startup, Twin Pick Rack helps develop integrated deployment strategies that minimize risk, accelerate implementation, and deliver long-term operational success.</p>
-                            </div>
-                            <div class="col-lg-4 text-lg-right mt-4 mt-lg-0">
-                                <a class="btn btn-twinlode-outline btn-capsule border-2x fw-700" href="contact.html">Get Deployment Consultation</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <section>
+    <div class="container">
+      <div class="grid grid-2" style="align-items:end; margin-bottom:32px;">
+        <div class="reveal"><span class="kicker">The Twin Pick Racks Approach</span><h2 style="margin-bottom:0;">From Project Planning to Operational Success</h2></div>
+        <div class="reveal"><p style="margin:0;">Successful warehouse deployments require more than installing equipment. Twin Pick Racks helps organizations plan, coordinate, integrate, and optimize every phase of implementation to minimize disruption, accelerate startup, and deliver long-term operational performance.</p></div>
+      </div>
+      <div class="grid grid-3">
+        <div class="process-step reveal"><span>1</span><h4>Plan</h4><p>Evaluate operational requirements, project objectives, facility constraints, implementation timelines, and resource needs to develop a deployment strategy that supports a successful rollout.</p></div>
+        <div class="process-step reveal"><span>2</span><h4>Coordinate</h4><p>Work with manufacturers, contractors, software providers, and internal stakeholders to align schedules, integrate technologies, and keep every phase of the project moving forward efficiently.</p></div>
+        <div class="process-step reveal"><span>3</span><h4>Deploy</h4><p>Support system integration, commissioning, operational readiness, and performance optimization to help ensure your warehouse is prepared for reliable, scalable, and long-term success.</p></div>
+      </div>
+    </div>
+  </section>
 
-            <section class="mt-0 pt-3 pb-3 background-white">
-                <div class="container">
-                    <div
-                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 3}' class="owl-carousel owl-theme d-sm-none">
-                        <div class="item overflow-hidden d-flexDeadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/asp.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden">
-                            <div class="partnerLogoSlide">
-                                <img src="assets/images/logos/boxLogix.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/bluffManufacturing.png"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/fcpMezzanine.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/inCord.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/interroll.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/nashvilleWire.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/performanceInstallations.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/RBI.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/rytec.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <!-- <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/wwmh.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div> -->
-                    </div>
+  <section class="section-dim">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <div class="cta-panel-copy">
+          <span class="kicker kicker-light">Plan With Confidence</span>
+          <h2>Ready for a Successful Deployment?</h2>
+          <p>Whether you're implementing a new warehouse control system, deploying conveyor automation, coordinating multiple equipment vendors, or preparing a facility for operational startup, Twin Pick Racks helps develop integrated deployment strategies that minimize risk, accelerate implementation, and deliver long-term operational success.</p>
+        </div>
+        <a class="btn btn-signal" href="mailto:info@twinpickrack.com">Get Deployment Consultation</a>
+      </div>
+    </div>
+  </section>
 
-                    <div
-                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 4}' class="owl-carousel owl-theme d-none d-sm-block d-lg-none">
-                        <div class="item overflow-hidden d-flexDeadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/asp.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden">
-                            <div class="partnerLogoSlide">
-                                <img src="assets/images/logos/boxLogix.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/bluffManufacturing.png"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/fcpMezzanine.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/inCord.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/interroll.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/nashvilleWire.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/performanceInstallations.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/RBI.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/rytec.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <!-- <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/wwmh.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div> -->
-                    </div>
+  <section class="section-tight">
+    <div class="container">
+      <div class="marquee">
+        <div class="marquee-track">
+          <img src="assets/images/logos/asp.png" alt="Advance Storage Products">
+          <img src="assets/images/logos/boxLogix.png" alt="BoxLogix">
+          <img src="assets/images/logos/bluffManufacturing.png" alt="Bluff Manufacturing">
+          <img src="assets/images/logos/fcpMezzanine.png" alt="FCP Mezzanine">
+          <img src="assets/images/logos/inCord.png" alt="InCord">
+          <img src="assets/images/logos/interroll.png" alt="Interroll">
+          <img src="assets/images/logos/nashvilleWire.png" alt="Nashville Wire">
+          <img src="assets/images/logos/performanceInstallations.png" alt="Performance Installations">
+          <img src="assets/images/logos/RBI.png" alt="RBI">
+          <img src="assets/images/logos/rytec.png" alt="Rytec">
+          <img src="assets/images/logos/asp.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/boxLogix.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/bluffManufacturing.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/fcpMezzanine.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/inCord.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/interroll.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/nashvilleWire.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/performanceInstallations.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/RBI.png" alt="" aria-hidden="true">
+          <img src="assets/images/logos/rytec.png" alt="" aria-hidden="true">
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    <div
-                    data-options='{"dots": false, "autoplay": true, "loop": true, "items": 5, "margin": 20}' class="owl-carousel owl-theme d-none d-lg-block">
-                        <div class="item overflow-hidden d-flexDeadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/asp.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden">
-                            <div class="partnerLogoSlide">
-                                <img src="assets/images/logos/boxLogix.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/bluffManufacturing.png"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/fcpMezzanine.png" style="max-width: 100%; max-height: 100%;"/>
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/inCord.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/interroll.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/nashvilleWire.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/performanceInstallations.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/RBI.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/rytec.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div>
-                        <!-- <div class="item overflow-hidden d-flex-deadCenter">
-                            <div class="partnerLogoSlideSquare">    
-                                <img src="assets/images/logos/wwmh.png" style="max-width: 100%; max-height: 100%;" />
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span class="js-year"></span> Twin Pick Racks. All Rights Reserved.</div>
+    </div>
+  </footer>
+</main>
 
-            <section class="footerBackground py-4 py-lg-5">
-                <div class="container">
-                    <div class="row align-items-center color-white">
-                        <div class="col-lg-4">
-                            <div class="border border-2x border-color-warning p-4 py-lg-4 text-center radius-secondary" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                                <div class="overflow-hidden">
-                                    <h4 class="color-white" data-zanim='{"delay":0}'>Connect with Us</h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                    <p class="px-lg-1 color-11 mb-0" data-zanim='{"delay":0.1}'>Get connected with Twin Pick Rack today</p>
-                                </div>
-                                <div class="row mt-3 align-items-center no-gutters">
-                                    <div class="col-3 ml-auto d-flex-deadCenter">
-                                        <a href="mailto:info@twinpickrack.com">
-                                            <div class="background-goodGray text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;">
-                                                <span class="w-100 fa fa-envelope color-white"></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-3 mr-auto d-flex-deadCenter">
-                                        <a href="productDeployment.html#" target="_blank">
-                                            <div class="background-goodGray text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;">
-                                                <span class="w-100 fa fa-linkedin color-white"></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 pl-lg-5 mt-3 mt-lg-0">
-                            <h5 class="color-white mb-0">Schedule a Call:</h5>
-                            <form class="mt-4" action="https://bennettdierckman.github.io/Twinlode/assets/php/callTwinpick.php"  method="post">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input class="form-control" type="hidden" />
-                                        <input class="form-control" type="text" name="name" required id="name" placeholder="Your Name" aria-label="Text input with dropdown button" /> </div>
-                                    <div class="col-sm-6 mt-4 mt-sm-0">
-                                        <input class="form-control" type="text" name="phone" required id="phone" placeholder="Phone Number" aria-label="Text input with dropdown button" /> </div>
-                                    <div class="col-sm-6 mt-4">
-                                        <input class="form-control" type="text" name="email" required id="email" placeholder="Email" aria-label="Text input with dropdown button" /> </div>
-                                    <div class="col-sm-6 mt-4">
-                                        <input type="hidden" id="previousPage" name="previousPage" value="../../index.html">
-                                        <button class="btn btn-goodGray btn-block" type="submit">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--/.row-->
-                </div>
-                <!--/.container-->
-            </section>
-            <footer class="background-primary py-3">
-                <div class="container">
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white">
-
-                        <!-- Copyright -->
-                        <div class="mb-2 mb-sm-0">
-                            &copy; <span id="copyright-year"></span> Twin Pick Rack. All Rights Reserved.
-                        </div>
-
-                        <!-- Footer Links -->
-                        <div class="d-flex gap-3">
-                            <a href="privacyPolicy.html" class="text-white text-decoration-none">
-                                Privacy Policy
-                            </a>
-                            &nbsp;&nbsp;|&nbsp;&nbsp;
-                            <a href="productDeployment.html#" class="text-white" style="text-decoration: underline;">
-                                Terms of Use
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </footer>
-
-            <script>
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
-            </script>
-        </main>
-        <!--  -->
-        <!--    JavaScripts-->
-        <!--    =============================================-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script src="assets/lib/jquery/dist/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/lib/gsap/src/minified/TweenMax.min.js"></script>
-        <script src="assets/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
-        <script src="assets/lib/CustomEase.min.js"></script>
-        <script src="assets/js/config.js"></script>
-        <script src="assets/js/zanimation.js"></script>
-        <script src="assets/js/googlemap.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap" async></script>
-        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-        <script src="assets/js/core.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+<script src="assets/js/site.js"></script>
+</body>
 </html>
