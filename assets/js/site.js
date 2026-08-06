@@ -74,4 +74,48 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  // Gallery lightbox
+  var galleryItems = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+  var lightbox = document.getElementById('lightbox');
+  if (galleryItems.length && lightbox) {
+    var lbImg = lightbox.querySelector('.lightbox-img');
+    var lbCaption = lightbox.querySelector('.lightbox-caption');
+    var lbClose = lightbox.querySelector('.lightbox-close');
+    var lbPrev = lightbox.querySelector('.lightbox-prev');
+    var lbNext = lightbox.querySelector('.lightbox-next');
+    var current = 0;
+
+    function openLightbox(i) {
+      current = (i + galleryItems.length) % galleryItems.length;
+      var item = galleryItems[current];
+      lbImg.src = item.getAttribute('data-full');
+      lbImg.alt = item.getAttribute('data-caption') || '';
+      lbCaption.textContent = item.getAttribute('data-caption') || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+    }
+
+    galleryItems.forEach(function (item, i) {
+      item.addEventListener('click', function () { openLightbox(i); });
+    });
+    if (lbClose) lbClose.addEventListener('click', closeLightbox);
+    if (lbPrev) lbPrev.addEventListener('click', function () { openLightbox(current - 1); });
+    if (lbNext) lbNext.addEventListener('click', function () { openLightbox(current + 1); });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') openLightbox(current - 1);
+      if (e.key === 'ArrowRight') openLightbox(current + 1);
+    });
+  }
 });
