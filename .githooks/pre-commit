@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Blocks the commit if the site test suite fails.
+#
+# Installed automatically for this clone; if it's ever missing, run:
+#   ./tests/install-hooks.sh
+set -uo pipefail
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+echo "Running site test suite before commit..."
+python3 tests/test_site.py
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo ""
+  echo "Commit blocked: tests/test_site.py failed (see above)."
+  echo "Fix the failures, or run 'git commit --no-verify' to bypass (not recommended)."
+  exit 1
+fi
+
+exit 0
