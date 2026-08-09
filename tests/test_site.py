@@ -23,6 +23,7 @@ page, image, or nav entry to a hand-written multi-page HTML site:
 """
 import os
 import re
+import subprocess
 import sys
 from html.parser import HTMLParser
 
@@ -40,6 +41,18 @@ VOID_TAGS = {
 CSS_EXEMPT_CLASSES = {
     'js-year', 'skip-link', 'work-process',
 }
+
+# OS-generated junk files that should never be committed.
+JUNK_FILE_RE = re.compile(r'(^|/)(\.DS_Store|Thumbs\.db|desktop\.ini|\._.*)$')
+
+# Leftover placeholder/dev-only text that shouldn't ship to production.
+PLACEHOLDER_PATTERNS = [
+    re.compile(r'lorem ipsum', re.I),
+    re.compile(r'\bTODO\b'),
+    re.compile(r'\bFIXME\b'),
+    re.compile(r'\bTBD\b'),
+    re.compile(r'\bPLACEHOLDER\b', re.I),
+]
 
 
 # ---------------------------------------------------------------------------
@@ -238,6 +251,21 @@ def split_href(href):
     return href, None
 
 
+def topbar_html(page):
+    """Extract the raw <div class="topbar">...</div></div> block."""
+    match = re.search(r'<div class="topbar">.*?</div>\s*</div>', RAW[page], re.S)
+    if not match:
+        raise AssertionError(f"{page}: could not locate <div class=\"topbar\">")
+    return match.group(0)
+
+
+def footer_copyright_html(page):
+    match = re.search(r'<div>&copy;.*?</div>', RAW[page], re.S)
+    if not match:
+        raise AssertionError(f"{page}: could not locate the footer copyright line")
+    return match.group(0)
+
+
 def nav_link_items(page):
     """Extract the (text, normalized_href) pairs from the primary nav."""
     raw = RAW[page]
@@ -410,6 +438,34 @@ def test_every_top_level_page_is_reachable_from_nav():
         check(
             failures, f in reference_hrefs,
             f"{f} exists but is not linked from the primary nav on index.html",
+        )
+    fail_if_any(failures)
+
+
+@suite.test
+def test_topbar_matches_reference_on_every_page():
+    reference = topbar_html('index.html')
+    failures = []
+    for f in PAGES:
+        if f == 'index.html':
+            continue
+        check(
+            failures, topbar_html(f) == reference,
+            f"{f}'s contact topbar (email/phone/social) does not match index.html's",
+        )
+    fail_if_any(failures)
+
+
+@suite.test
+def test_footer_copyright_matches_reference_on_every_page():
+    reference = footer_copyright_html('index.html')
+    failures = []
+    for f in PAGES:
+        if f == 'index.html':
+            continue
+        check(
+            failures, footer_copyright_html(f) == reference,
+            f"{f}'s footer copyright line does not match index.html's",
         )
     fail_if_any(failures)
 
@@ -680,6 +736,79 @@ def test_lightbox_scaffold_present_when_gallery_used():
             failures, required_classes <= classes,
             f"{f}: missing lightbox classes {required_classes - classes} needed by site.js",
         )
+    fail_if_any(failures)
+
+
+# ---------------------------------------------------------------------------
+# Tests: repo hygiene, safe external links, content quality
+# ---------------------------------------------------------------------------
+
+@suite.test
+def test_no_os_junk_files_tracked():
+    result = subprocess.run(
+        ['git', '-C', ROOT, 'ls-files'],
+        capture_output=True, text=True, check=True,
+    )
+    tracked = result.stdout.splitlines()
+    junk = [p for p in tracked if JUNK_FILE_RE.search(p)]
+    if junk:
+        raise AssertionError(
+            "OS junk files are tracked in git: " + ", ".join(junk) +
+            " (remove with 'git rm --cached' and add to .gitignore)"
+        )
+
+
+@suite.test
+def test_no_placeholder_text():
+    failures = []
+    sources = dict(RAW)
+    sources['assets/css/site.css'] = open(
+        os.path.join(ROOT, 'assets', 'css', 'site.css'), encoding='utf-8'
+    ).read()
+    sources['assets/js/site.js'] = open(
+        os.path.join(ROOT, 'assets', 'js', 'site.js'), encoding='utf-8'
+    ).read()
+    for name, text in sources.items():
+        for pattern in PLACEHOLDER_PATTERNS:
+            m = pattern.search(text)
+            if m:
+                line = text.count('\n', 0, m.start()) + 1
+                failures.append(f"{name}:{line}: leftover placeholder text {m.group(0)!r}")
+    fail_if_any(failures)
+
+
+@suite.test
+def test_target_blank_has_noopener():
+    failures = []
+    for f in PAGES:
+        for el in PARSED[f].elements:
+            if el['tag'] != 'a' or el['attrs'].get('target') != '_blank':
+                continue
+            rel = set(el['attrs'].get('rel', '').lower().split())
+            check(
+                failures, {'noopener', 'noreferrer'} <= rel,
+                f"{f}:{el['line']}: <a target=\"_blank\"> is missing "
+                "rel=\"noopener noreferrer\" (reverse-tabnabbing risk)",
+            )
+    fail_if_any(failures)
+
+
+@suite.test
+def test_gallery_captions_unique_per_page():
+    failures = []
+    for f in PAGES:
+        seen = {}
+        for el in PARSED[f].elements:
+            if 'gallery-item' not in el['attrs'].get('class', '').split():
+                continue
+            caption = el['attrs'].get('data-caption', '')
+            if caption in seen:
+                failures.append(
+                    f"{f}:{el['line']}: duplicate gallery data-caption {caption!r} "
+                    f"(first used at line {seen[caption]})"
+                )
+            else:
+                seen[caption] = el['line']
     fail_if_any(failures)
 
 
