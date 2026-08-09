@@ -217,6 +217,8 @@ for _f in PAGES:
 BG_IMAGE_RE = re.compile(r'background-image\s*:\s*url\(\s*([^)\s]+?)\s*\)')
 CSS_CLASS_SELECTOR_RE = re.compile(r'\.([a-zA-Z_][\w-]*)')
 CSS_URL_RE = re.compile(r'url\(\s*[\'"]?([^)\'"]+)[\'"]?\s*\)')
+TEL_LINK_RE = re.compile(r'<a href="tel:([^"]+)"[^>]*>(.*?)</a>', re.S)
+MAILTO_LINK_RE = re.compile(r'<a href="mailto:([^"]+)"[^>]*>(.*?)</a>', re.S)
 
 
 def path_exists_case_sensitive(rel_path):
@@ -453,6 +455,35 @@ def test_topbar_matches_reference_on_every_page():
             failures, topbar_html(f) == reference,
             f"{f}'s contact topbar (email/phone/social) does not match index.html's",
         )
+    fail_if_any(failures)
+
+
+@suite.test
+def test_tel_href_matches_displayed_number():
+    failures = []
+    for f in PAGES:
+        for href_val, inner in TEL_LINK_RE.findall(RAW[f]):
+            text = re.sub(r'<[^>]+>', '', inner)
+            href_digits = re.sub(r'\D', '', href_val)
+            text_digits = re.sub(r'\D', '', text)
+            check(
+                failures, bool(text_digits) and href_digits == text_digits,
+                f"{f}: tel:{href_val} does not match the displayed number "
+                f"{text.strip()!r} (href digits {href_digits}, text digits {text_digits})",
+            )
+    fail_if_any(failures)
+
+
+@suite.test
+def test_mailto_href_matches_displayed_address():
+    failures = []
+    for f in PAGES:
+        for href_val, inner in MAILTO_LINK_RE.findall(RAW[f]):
+            text = re.sub(r'<[^>]+>', '', inner).strip()
+            check(
+                failures, href_val.strip().lower() == text.lower(),
+                f"{f}: mailto:{href_val} does not match the displayed address {text!r}",
+            )
     fail_if_any(failures)
 
 
