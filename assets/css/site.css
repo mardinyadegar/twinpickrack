@@ -304,6 +304,7 @@ section{ padding:76px 0; }
 .catalog-menu{ padding:30px; display:grid; grid-template-columns:1fr; gap:32px; }
 @media(min-width:620px){ .catalog-menu{ grid-template-columns:repeat(2,1fr); } }
 @media(min-width:1080px){ .catalog-menu{ grid-template-columns:repeat(4,1fr); gap:36px; padding:34px 36px; } }
+@media(min-width:820px){ .catalog-menu.catalog-menu-3col{ grid-template-columns:repeat(3,1fr); } }
 .catalog-col{ display:flex; flex-direction:column; gap:22px; }
 .catalog-group h3{
   color:#fff; font-size:.98rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; margin-bottom:12px;
