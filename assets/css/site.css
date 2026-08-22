@@ -89,7 +89,7 @@ p.lead{ font-size:1.15rem; color:var(--ink-2); }
 /* ---------- header / nav ---------- */
 .site-header{ position:sticky; top:0; z-index:80; background:var(--ink); }
 .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
-.brand{ display:inline-flex; align-items:center; background:#fff; padding:8px 16px; border-radius:var(--radius); }
+.brand{ display:inline-flex; align-items:center; }
 .brand img{ height:34px; width:auto; display:block; }
 .nav-list{ display:flex; align-items:center; gap:6px; list-style:none; }
 .nav-list > li{ position:relative; }
