@@ -118,4 +118,38 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.key === 'ArrowRight') openLightbox(current + 1);
     });
   }
+
+  // Dock equipment catalog explorer
+  var catalogItems = Array.prototype.slice.call(document.querySelectorAll('.catalog-item'));
+  var catalogPreviewImg = document.getElementById('catalogPreviewImg');
+  if (catalogItems.length && catalogPreviewImg) {
+    var catalogPreviewEyebrow = document.getElementById('catalogPreviewEyebrow');
+    var catalogPreviewName = document.getElementById('catalogPreviewName');
+    var catalogPreviewDesc = document.getElementById('catalogPreviewDesc');
+    var catalogPreviewLink = document.getElementById('catalogPreviewLink');
+
+    catalogItems.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+
+        catalogItems.forEach(function (i) { i.classList.remove('is-active'); });
+        item.classList.add('is-active');
+
+        catalogPreviewImg.classList.remove('is-loaded');
+        catalogPreviewImg.src = item.getAttribute('data-img');
+        catalogPreviewImg.alt = item.textContent;
+        catalogPreviewEyebrow.textContent = item.getAttribute('data-cat') || '';
+        catalogPreviewName.textContent = item.textContent;
+        catalogPreviewDesc.textContent = item.getAttribute('data-desc') || '';
+        catalogPreviewLink.href = item.getAttribute('href');
+      });
+    });
+    if (catalogPreviewImg.complete) {
+      catalogPreviewImg.classList.add('is-loaded');
+    }
+    catalogPreviewImg.addEventListener('load', function () {
+      catalogPreviewImg.classList.add('is-loaded');
+    });
+  }
 });
