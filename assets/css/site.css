@@ -323,6 +323,35 @@ section{ padding:76px 0; }
 .catalog-item:hover, .catalog-item:focus-visible{ color:#fff; }
 .catalog-item.is-active{ color:var(--signal); border-left-color:var(--signal); font-weight:600; }
 
+/* ---------- dealer partner banner ---------- */
+.partner-banner{
+  display:flex; flex-wrap:wrap; align-items:center; gap:28px;
+  background:var(--ink); color:#fff; padding:28px 32px; border-top:4px solid var(--signal);
+  margin-bottom:28px;
+}
+.partner-banner-logos{ display:flex; align-items:center; gap:18px; flex:none; }
+.partner-banner-logos img{ height:40px; width:auto; max-width:200px; object-fit:contain; }
+.partner-banner-logos img.is-boxlogix{ background:#fff; padding:6px 10px; }
+.partner-banner-x{ color:var(--signal); font-weight:700; font-size:1.1rem; }
+.partner-banner-copy{ flex:1 1 380px; }
+.partner-banner-tag{
+  display:inline-flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:.1em;
+  font-size:.74rem; font-weight:700; color:var(--signal); margin-bottom:6px;
+}
+.partner-banner-tag::before{ content:""; width:8px; height:8px; background:var(--signal); }
+.partner-banner-copy p{ margin:0; color:#D5D8DC; font-size:.92rem; max-width:64ch; }
+
+/* ---------- embedded partner site ---------- */
+.site-iframe-wrap{
+  border-top:4px solid var(--signal); background:var(--white); box-shadow:0 20px 50px rgba(19,42,70,.14);
+}
+.site-iframe-wrap iframe{
+  display:block; width:100%; height:1100px; border:0;
+}
+@media(max-width:720px){ .site-iframe-wrap iframe{ height:760px; } }
+.iframe-fallback{ margin:16px 2px 0; font-size:.86rem; text-align:right; }
+.iframe-fallback a{ font-weight:600; }
+
 /* ---------- process ---------- */
 .process-step{ padding:30px 26px; background:var(--white); border:1px solid var(--line); height:100%; }
 .process-step span{
