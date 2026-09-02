@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   if (scrim) scrim.addEventListener('click', closeNav);
 
-  // Mobile submenu expand (Solutions dropdown)
-  document.querySelectorAll('.nav-list > li').forEach(function (li) {
+  // Mobile submenu expand (Solutions dropdown and nested category flyouts)
+  document.querySelectorAll('.nav-list > li, .dropdown > li.has-sub').forEach(function (li) {
     var link = li.querySelector(':scope > a');
-    var sub = li.querySelector('.dropdown');
+    var sub = li.querySelector(':scope > .dropdown, :scope > .dropdown-sub');
     if (!sub || !link) return;
     link.addEventListener('click', function (e) {
       if (window.innerWidth <= 900) {
