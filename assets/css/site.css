@@ -359,7 +359,7 @@ section{ padding:76px 0; }
 }
 .partner-banner-logos{ display:flex; align-items:center; gap:18px; flex:none; }
 .partner-banner-logos img{ height:40px; width:auto; max-width:200px; object-fit:contain; }
-.partner-banner-logos img.is-boxlogix{ background:#fff; padding:6px 10px; }
+.partner-banner-logos img.is-boxlogix, .partner-banner-logos img.is-wpss{ background:#fff; padding:6px 10px; }
 .partner-banner-x{ color:var(--signal); font-weight:700; font-size:1.1rem; }
 .partner-banner-copy{ flex:1 1 380px; }
 .partner-banner-tag{
@@ -379,6 +379,29 @@ section{ padding:76px 0; }
 @media(max-width:720px){ .site-iframe-wrap iframe{ height:760px; } }
 .iframe-fallback{ margin:16px 2px 0; font-size:.86rem; text-align:right; }
 .iframe-fallback a{ font-weight:600; }
+
+/* crops fixed-height header/footer bands out of an embedded partner site (their own nav/CTA bar
+   and site footer) by overscaling the iframe, shifting it up, and pinning the wrapper to the
+   visible height so both the shifted-up top and the excess at the bottom get clipped */
+.site-iframe-wrap.crop-embed-header{ overflow:hidden; height:1100px; }
+.site-iframe-wrap.crop-embed-header iframe{ height:1780px; margin-top:-185px; }
+@media(max-width:720px){
+  .site-iframe-wrap.crop-embed-header{ height:760px; }
+  .site-iframe-wrap.crop-embed-header iframe{ height:1368px; margin-top:-100px; }
+}
+@media(max-width:592px){
+  .site-iframe-wrap.crop-embed-header iframe{ height:1726px; margin-top:-100px; }
+}
+
+/* crops the header (with its CTA button) plus the newsletter-signup block and footer out of
+   the BoxLogix embed by overscaling the iframe, shifting it up, and pinning the wrapper to the
+   visible height so both the shifted-up top and the excess at the bottom get clipped */
+.site-iframe-wrap.crop-embed-boxlogix{ overflow:hidden; height:1100px; }
+.site-iframe-wrap.crop-embed-boxlogix iframe{ height:2234px; margin-top:-108px; }
+@media(max-width:720px){
+  .site-iframe-wrap.crop-embed-boxlogix{ height:760px; }
+  .site-iframe-wrap.crop-embed-boxlogix iframe{ height:2359px; margin-top:-93px; }
+}
 
 /* ---------- process ---------- */
 .process-step{ padding:30px 26px; background:var(--white); border:1px solid var(--line); height:100%; }
