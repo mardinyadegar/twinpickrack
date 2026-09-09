@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var lightbox = document.getElementById('lightbox');
   if (galleryItems.length && lightbox) {
     var lbImg = lightbox.querySelector('.lightbox-img');
+    var lbVideo = lightbox.querySelector('.lightbox-video');
     var lbCaption = lightbox.querySelector('.lightbox-caption');
     var lbClose = lightbox.querySelector('.lightbox-close');
     var lbPrev = lightbox.querySelector('.lightbox-prev');
@@ -89,9 +90,28 @@ document.addEventListener('DOMContentLoaded', function () {
     function openLightbox(i) {
       current = (i + galleryItems.length) % galleryItems.length;
       var item = galleryItems[current];
-      lbImg.src = item.getAttribute('data-full');
-      lbImg.alt = item.getAttribute('data-caption') || '';
-      lbCaption.textContent = item.getAttribute('data-caption') || '';
+      var isVideo = item.getAttribute('data-type') === 'video';
+      var src = item.getAttribute('data-full');
+      var caption = item.getAttribute('data-caption') || '';
+
+      if (isVideo && lbVideo) {
+        lbImg.hidden = true;
+        lbImg.removeAttribute('src');
+        lbVideo.hidden = false;
+        lbVideo.src = src;
+        lbVideo.load();
+      } else {
+        if (lbVideo) {
+          lbVideo.hidden = true;
+          lbVideo.pause();
+          lbVideo.removeAttribute('src');
+          lbVideo.load();
+        }
+        lbImg.hidden = false;
+        lbImg.src = src;
+        lbImg.alt = caption;
+      }
+      lbCaption.textContent = caption;
       lightbox.classList.add('is-open');
       lightbox.setAttribute('aria-hidden', 'false');
       document.body.classList.add('lightbox-open');
@@ -100,6 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
       lightbox.classList.remove('is-open');
       lightbox.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('lightbox-open');
+      if (lbVideo) {
+        lbVideo.pause();
+        lbVideo.removeAttribute('src');
+        lbVideo.load();
+      }
     }
 
     galleryItems.forEach(function (item, i) {

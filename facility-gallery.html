@@ -274,11 +274,14 @@
           <img src="assets/images/gallery/pick-rack-aisle-crate-storage-long-view.jpg" alt="Long aisle view of pick rack shelving stocked with crates" loading="lazy">
         </button>
 
-        <div class="gallery-item gallery-video reveal">
-          <video controls muted playsinline preload="metadata" aria-label="Pushback pallet rack twin pick system in action">
-            <source src="assets/videos/pushback-pallet-rack-twin-pick-demo.mp4" type="video/mp4">
+        <button class="gallery-item gallery-item-video reveal" type="button" data-type="video" data-full="assets/videos/pushback-pallet-rack-twin-pick-demo.mp4" data-caption="Pushback pallet rack twin pick system in action">
+          <video muted playsinline preload="metadata" tabindex="-1" aria-hidden="true">
+            <source src="assets/videos/pushback-pallet-rack-twin-pick-demo.mp4#t=0.5" type="video/mp4">
           </video>
-        </div>
+          <span class="gallery-play-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </button>
 
       </div>
     </div>
@@ -344,6 +347,7 @@
   </button>
   <figure class="lightbox-figure">
     <img class="lightbox-img" src="" alt="">
+    <video class="lightbox-video" controls playsinline hidden></video>
     <figcaption class="lightbox-caption"></figcaption>
   </figure>
   <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">
