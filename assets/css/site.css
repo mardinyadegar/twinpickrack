@@ -403,6 +403,16 @@ section{ padding:76px 0; }
   .site-iframe-wrap.crop-embed-boxlogix iframe{ height:2359px; margin-top:-93px; }
 }
 
+/* crops Rytec's sticky nav out of the embed by shifting the iframe up by the nav's height, and
+   pins the wrapper to end right after the "Find Your Door" hero/intro section so nothing below
+   it (the long product catalog and footer) shows in the cropped window */
+.site-iframe-wrap.crop-embed-rytec{ overflow:hidden; height:1560px; }
+.site-iframe-wrap.crop-embed-rytec iframe{ height:1760px; margin-top:-180px; }
+@media(max-width:720px){
+  .site-iframe-wrap.crop-embed-rytec{ height:660px; }
+  .site-iframe-wrap.crop-embed-rytec iframe{ height:800px; margin-top:-100px; }
+}
+
 /* ---------- process ---------- */
 .process-step{ padding:30px 26px; background:var(--white); border:1px solid var(--line); height:100%; }
 .process-step span{
