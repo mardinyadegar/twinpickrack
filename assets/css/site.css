@@ -359,7 +359,7 @@ section{ padding:76px 0; }
 }
 .partner-banner-logos{ display:flex; align-items:center; gap:18px; flex:none; }
 .partner-banner-logos img{ height:40px; width:auto; max-width:200px; object-fit:contain; }
-.partner-banner-logos img.is-boxlogix, .partner-banner-logos img.is-wpss{ background:#fff; padding:6px 10px; }
+.partner-banner-logos img.is-boxlogix, .partner-banner-logos img.is-wpss, .partner-banner-logos img.is-advancelifts{ background:#fff; padding:6px 10px; }
 .partner-banner-x{ color:var(--signal); font-weight:700; font-size:1.1rem; }
 .partner-banner-copy{ flex:1 1 380px; }
 .partner-banner-tag{
@@ -412,6 +412,15 @@ section{ padding:76px 0; }
   .site-iframe-wrap.crop-embed-rytec{ height:660px; }
   .site-iframe-wrap.crop-embed-rytec iframe{ height:800px; margin-top:-100px; }
 }
+
+/* Advance Lifts' page is laid out fluidly rather than on fixed breakpoints, so the phone number's
+   position shifts unpredictably at in-between widths and a simple percentage-width iframe with a
+   static crop height can't reliably keep the number in and everything below it out. Instead
+   site.js renders the iframe at a fixed reference width (so the embedded page always computes the
+   same layout) and scales that rendering down to fit the wrapper, so the crop height below always
+   lines up with the same point on the page&mdash;just under the phone number&mdash;at any screen size. */
+.site-iframe-wrap.crop-embed-fixedwidth{ overflow:hidden; height:850px; }
+.site-iframe-wrap.crop-embed-fixedwidth iframe{ display:block; border:0; transform-origin:top left; }
 
 /* ---------- process ---------- */
 .process-step{ padding:30px 26px; background:var(--white); border:1px solid var(--line); height:100%; }

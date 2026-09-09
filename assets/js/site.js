@@ -177,4 +177,26 @@ document.addEventListener('DOMContentLoaded', function () {
       catalogPreviewImg.classList.add('is-loaded');
     });
   }
+
+  // Renders a fixed-width iframe embed and scales it to fit its wrapper, so the crop height
+  // (set via data-desktop-crop / data-mobile-crop) always lines up with the same point on the
+  // embedded page no matter how wide the wrapper actually is.
+  document.querySelectorAll('.crop-embed-fixedwidth').forEach(function (wrap) {
+    var iframe = wrap.querySelector('iframe');
+    if (!iframe) return;
+    var renderHeight = parseFloat(wrap.getAttribute('data-render-height')) || 2000;
+    iframe.style.height = renderHeight + 'px';
+
+    function apply() {
+      var mobile = window.matchMedia('(max-width:720px)').matches;
+      var embedWidth = parseFloat(wrap.getAttribute(mobile ? 'data-mobile-width' : 'data-desktop-width')) || 1152;
+      var cropHeight = parseFloat(wrap.getAttribute(mobile ? 'data-mobile-crop' : 'data-desktop-crop')) || 850;
+      iframe.style.width = embedWidth + 'px';
+      var scale = wrap.clientWidth / embedWidth;
+      iframe.style.transform = 'scale(' + scale + ')';
+      wrap.style.height = (cropHeight * scale) + 'px';
+    }
+    apply();
+    window.addEventListener('resize', apply);
+  });
 });
