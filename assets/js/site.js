@@ -180,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Renders a fixed-width iframe embed and scales it to fit its wrapper, so the crop height
   // (set via data-desktop-crop / data-mobile-crop) always lines up with the same point on the
-  // embedded page no matter how wide the wrapper actually is.
+  // embedded page no matter how wide the wrapper actually is. Optional data-desktop-top /
+  // data-mobile-top shift the visible window down the embedded page, cropping its header off the top.
   document.querySelectorAll('.crop-embed-fixedwidth').forEach(function (wrap) {
     var iframe = wrap.querySelector('iframe');
     if (!iframe) return;
@@ -191,9 +192,11 @@ document.addEventListener('DOMContentLoaded', function () {
       var mobile = window.matchMedia('(max-width:720px)').matches;
       var embedWidth = parseFloat(wrap.getAttribute(mobile ? 'data-mobile-width' : 'data-desktop-width')) || 1152;
       var cropHeight = parseFloat(wrap.getAttribute(mobile ? 'data-mobile-crop' : 'data-desktop-crop')) || 850;
+      var cropTop = parseFloat(wrap.getAttribute(mobile ? 'data-mobile-top' : 'data-desktop-top')) || 0;
       iframe.style.width = embedWidth + 'px';
       var scale = wrap.clientWidth / embedWidth;
       iframe.style.transform = 'scale(' + scale + ')';
+      iframe.style.marginTop = (-cropTop * scale) + 'px';
       wrap.style.height = (cropHeight * scale) + 'px';
     }
     apply();
