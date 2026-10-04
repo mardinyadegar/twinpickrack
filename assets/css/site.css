@@ -380,13 +380,12 @@ section{ padding:76px 0; }
 .iframe-fallback{ margin:16px 2px 0; font-size:.86rem; text-align:right; }
 .iframe-fallback a{ font-weight:600; }
 
-/* lays an invisible click-blocker over the top of an embedded partner site, covering its header
-   (McGuire's Contact Us / Find a Dealer buttons). The header is pinned to the top of the frame
-   both at page top and after scrolling, so a static overlay keeps covering it. */
-.site-iframe-wrap.block-embed-header{ position:relative; }
-.site-iframe-wrap.block-embed-header::before{
-  content:""; position:absolute; top:0; left:0; right:0; height:80px; z-index:2;
-}
+/* crops McGuire's fixed header (nav plus Contact Us / Find a Dealer buttons) out of the embed by
+   shifting the iframe up by the header's height (80px desktop, 40px mobile). The header is pinned
+   to the top of the frame even after scrolling, so it stays clipped above the wrapper. */
+.site-iframe-wrap.crop-embed-mcguire{ overflow:hidden; }
+.site-iframe-wrap.crop-embed-mcguire iframe{ height:1180px; margin-top:-80px; }
+@media(max-width:720px){ .site-iframe-wrap.crop-embed-mcguire iframe{ height:800px; margin-top:-40px; } }
 
 /* crops fixed-height header/footer bands out of an embedded partner site (their own nav/CTA bar
    and site footer) by overscaling the iframe, shifting it up, and pinning the wrapper to the
