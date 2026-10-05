@@ -45,6 +45,31 @@ CSS_EXEMPT_CLASSES = {
 # OS-generated junk files that should never be committed.
 JUNK_FILE_RE = re.compile(r'(^|/)(\.DS_Store|Thumbs\.db|desktop\.ini|\._.*)$')
 
+# Scripts that are meant to be part of the published repo. Anything else that
+# looks like a script (e.g. the local-only brochure build/publish tooling) must
+# never be committed or uploaded: add a file here only if it really ships.
+SCRIPT_EXTENSIONS = (
+    '.py', '.sh', '.bash', '.zsh', '.command', '.js', '.mjs', '.cjs', '.ts',
+    '.rb', '.pl', '.ps1', '.bat', '.cmd',
+)
+ALLOWED_SCRIPTS = {
+    'assets/js/site.js',
+    'tests/test_site.py',
+    'tests/run_tests.sh',
+    'tests/install-hooks.sh',
+    '.githooks/pre-commit',
+}
+# Local-only tooling that must stay out of the repo and stay in .gitignore as a
+# safety net. Checked both at the repo root and where the tooling used to live.
+LOCAL_ONLY_SCRIPTS = ['build_brochures.py', 'publish_brochures.py', 'preview.sh']
+LOCAL_ONLY_DIRS = ['', 'brochures/_build/', 'brochures/']
+
+# What the published brochure folder is allowed to contain.
+BROCHURE_DIR = os.path.join('assets', 'brochures')
+BROCHURE_ALLOWED_EXTENSIONS = ('.pdf', '.jpg')
+# PDF features that make a document run code or launch things when opened.
+PDF_ACTIVE_CONTENT = (b'/JavaScript', b'/JS ', b'/JS(', b'/Launch', b'/OpenAction')
+
 # Leftover placeholder/dev-only text that shouldn't ship to production.
 PLACEHOLDER_PATTERNS = [
     re.compile(r'lorem ipsum', re.I),
@@ -787,6 +812,70 @@ def test_no_os_junk_files_tracked():
             "OS junk files are tracked in git: " + ", ".join(junk) +
             " (remove with 'git rm --cached' and add to .gitignore)"
         )
+
+
+def committable_files():
+    """Every file git would publish on the next commit: already tracked or staged,
+    plus untracked files that .gitignore does not exclude (what `git add .` picks up)."""
+    result = subprocess.run(
+        ['git', '-C', ROOT, 'ls-files', '--cached', '--others', '--exclude-standard'],
+        capture_output=True, text=True, check=True,
+    )
+    return sorted(p for p in set(result.stdout.splitlines())
+                  if os.path.exists(os.path.join(ROOT, p)))
+
+
+@suite.test
+def test_only_approved_scripts_are_committable():
+    """Scripts stay local. Only the allowlisted ones may ever be published."""
+    rogue = [
+        p for p in committable_files()
+        if p.lower().endswith(SCRIPT_EXTENSIONS) and p not in ALLOWED_SCRIPTS
+    ]
+    if rogue:
+        raise AssertionError(
+            "Script files would be uploaded to the site: " + ", ".join(rogue) +
+            ". Keep them out of the repo (local only). If one truly must ship, "
+            "add it to ALLOWED_SCRIPTS in tests/test_site.py."
+        )
+
+
+@suite.test
+def test_local_only_scripts_are_gitignored():
+    """The brochure tooling is ignored by git so it can't be added by accident."""
+    failures = []
+    for name in LOCAL_ONLY_SCRIPTS:
+        for prefix in LOCAL_ONLY_DIRS:
+            path = prefix + name
+            ignored = subprocess.run(
+                ['git', '-C', ROOT, 'check-ignore', '-q', '--no-index', path],
+            ).returncode == 0
+            check(failures, ignored,
+                  f"{path} is not covered by .gitignore (add '{name}' to .gitignore)")
+    fail_if_any(failures)
+
+
+@suite.test
+def test_brochure_folder_has_only_pdfs_and_thumbnails():
+    """No code can ride along in the published brochure folder, or inside a PDF."""
+    failures = []
+    folder = os.path.join(ROOT, BROCHURE_DIR)
+    for dirpath, _dirs, files in os.walk(folder):
+        for name in files:
+            full = os.path.join(dirpath, name)
+            rel = os.path.relpath(full, ROOT).replace(os.sep, '/')
+            if name == '.DS_Store':
+                continue
+            if not name.lower().endswith(BROCHURE_ALLOWED_EXTENSIONS):
+                failures.append(f"{rel}: only .pdf and .jpg files belong in {BROCHURE_DIR}")
+            elif name.lower().endswith('.pdf'):
+                with open(full, 'rb') as fh:
+                    data = fh.read()
+                for marker in PDF_ACTIVE_CONTENT:
+                    if marker in data:
+                        failures.append(
+                            f"{rel}: PDF contains active content {marker.decode().strip()!r}")
+    fail_if_any(failures)
 
 
 @suite.test

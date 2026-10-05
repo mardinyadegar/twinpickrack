@@ -2,3 +2,8 @@
 ._*
 Thumbs.db
 desktop.ini
+
+# Local-only brochure tooling (never publish)
+build_brochures.py
+publish_brochures.py
+preview.sh
