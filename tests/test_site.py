@@ -304,8 +304,15 @@ def nav_link_items(page):
     normalized = []
     for href, text in items:
         text = re.sub(r'<[^>]+>', '', text).strip()
-        if href.startswith('index.html#'):
-            href = href[len('index.html'):]
+        # Subpages point "home" at the draft homepage (draft/index-future.html)
+        # while index.html stays the under-construction page; treat both as home.
+        for home in ('draft/index-future.html', 'index.html'):
+            if href == home:
+                href = 'index.html'
+                break
+            if href.startswith(home + '#'):
+                href = href[len(home):]
+                break
         normalized.append((text, href))
     return normalized
 
@@ -553,6 +560,9 @@ def test_local_links_resolve():
                 target_page = f
             if frag:
                 target_parsed = PARSED.get(target_page)
+                if target_parsed is None and target_page.endswith('.html'):
+                    # e.g. draft/index-future.html: not a root page, but a real one.
+                    target_parsed = load_page(target_page)[1]
                 if target_parsed is None:
                     failures.append(
                         f"{f}:{el['line']}: cannot verify anchor '#{frag}', "
