@@ -502,6 +502,12 @@ section{ padding:76px 0; }
   background:linear-gradient(180deg, transparent 55%, rgba(19,42,70,.55));
 }
 .gallery-item:hover::after, .gallery-item:focus-visible::after{ opacity:1; }
+/* Mini gallery of tall photos: one row of four from tablet width up */
+@media(min-width:640px){ .gallery-grid-portrait{ grid-template-columns:repeat(4,1fr); } }
+.gallery-grid-portrait .gallery-item img{ aspect-ratio:3/4; }
+/* Mini gallery of three photos: stacked on phones, one row of three from tablet width up */
+.gallery-grid-trio{ grid-template-columns:1fr; }
+@media(min-width:640px){ .gallery-grid-trio{ grid-template-columns:repeat(3,1fr); } }
 .gallery-item-video{ background:#000; }
 .gallery-item-video video{ width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; display:block; pointer-events:none; }
 .gallery-play-icon{
