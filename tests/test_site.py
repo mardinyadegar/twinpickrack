@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Regression test suite for the static Twin Pick Racks site.
+Regression test suite for the static Twinpick Racks site.
 
 Pure stdlib, and deliberately avoids `unittest`/`copy`/`logging`: on some
 machines the local Python 3 install has a corrupted weakref.py (a system
@@ -381,8 +381,8 @@ def test_title_present_and_prefixed():
         check(failures, bool(title), f"{f} has an empty <title>")
         if title:
             check(
-                failures, title.startswith('Twin Pick Racks'),
-                f"{f} <title> ({title!r}) should start with 'Twin Pick Racks' for brand consistency",
+                failures, title.startswith('Twinpick Racks'),
+                f"{f} <title> ({title!r}) should start with 'Twinpick Racks' for brand consistency",
             )
     fail_if_any(failures)
 
