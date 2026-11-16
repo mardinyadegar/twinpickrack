@@ -609,3 +609,22 @@ body.lightbox-open{ overflow:hidden; }
   .brochure-card{ grid-template-columns:1fr; gap:22px; padding:24px 22px; }
   .brochure-thumb{ max-width:180px; }
 }
+
+/* ---------- embedded PDF viewer (software page) ---------- */
+.page-hero.page-hero-compact{ padding:64px 0 44px; }
+.pdf-viewer-section{ padding:32px 0 64px; }
+.pdf-viewer{
+  border-top:4px solid var(--signal); background:var(--white); box-shadow:0 20px 50px rgba(19,42,70,.14);
+}
+.pdf-object{ display:block; width:100%; height:calc(100vh - 120px); min-height:720px; border:0; }
+.pdf-pages{ display:flex; flex-direction:column; gap:16px; padding:16px; background:var(--paper-dim); }
+.pdf-pages img{ display:block; width:100%; max-width:900px; height:auto; margin:0 auto; box-shadow:0 6px 18px rgba(19,42,70,.16); }
+.pdf-pages-mobile{ display:none; }
+.pdf-viewer-note{ margin:14px 2px 0; font-size:.86rem; text-align:right; color:var(--steel-light); }
+.pdf-viewer-note a{ font-weight:600; }
+/* phones: built-in PDF viewers are unreliable inline, so show the pages as images */
+@media(max-width:720px){
+  .pdf-object{ display:none; }
+  .pdf-pages-mobile{ display:flex; padding:10px; gap:10px; }
+  .pdf-viewer-note{ text-align:left; }
+}
