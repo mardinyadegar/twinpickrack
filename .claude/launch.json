@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site-preview",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-e", "httpd", "/private/tmp/claude-501/-Users-mardinyadegar--claude-spares-spare-5aFuci/c919f931-294f-4eaf-aeaf-327727e21af8/scratchpad/site", "-p", "8765"],
+      "port": 8765
+    }
+  ]
+}
