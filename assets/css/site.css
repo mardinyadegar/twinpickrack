@@ -289,6 +289,16 @@ section{ padding:76px 0; }
   border-left:2px solid var(--teal-dark); font-size:.74rem; font-weight:600; color:var(--teal-dark);
 }
 
+/* ---------- technology photo cards (automation) ---------- */
+.tech-card{ margin:0; display:flex; flex-direction:column; background:var(--white); border:1px solid var(--line); overflow:hidden; height:100%; }
+.tech-card-media{ overflow:hidden; background:var(--paper-dim); }
+.tech-card-media img{ width:100%; aspect-ratio:3/2; object-fit:cover; display:block; transition:transform .4s ease; }
+.tech-card:hover .tech-card-media img{ transform:scale(1.04); }
+.tech-card figcaption{ padding:20px 22px 22px; border-top:3px solid var(--signal); flex:1; }
+.tech-card h3{ font-size:1.02rem; margin-bottom:8px; }
+.tech-card p{ font-size:.88rem; margin:0; }
+.tech-credit{ margin:18px 0 0; text-align:center; font-size:.78rem; color:var(--steel); }
+
 /* ---------- solution detail pages ---------- */
 .breadcrumb{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:.82rem; color:#AEBBCC; margin-bottom:16px; }
 .breadcrumb a{ color:#AEBBCC; }
@@ -296,6 +306,9 @@ section{ padding:76px 0; }
 .breadcrumb span{ opacity:.5; }
 .detail-media{ overflow:hidden; background:var(--paper-dim); border:1px solid var(--line); }
 .detail-media img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; display:block; filter:contrast(1.02); }
+.detail-figure{ margin:0; }
+.detail-figure figcaption{ margin-top:12px; padding-left:12px; border-left:3px solid var(--signal); font-size:.86rem; line-height:1.55; color:var(--steel); }
+.detail-figure figcaption strong{ color:var(--ink); }
 .related-list{ list-style:none; display:flex; flex-wrap:wrap; gap:10px 16px; }
 .related-list li{ position:relative; padding-left:16px; }
 .related-list li::before{ content:""; position:absolute; left:0; top:9px; width:7px; height:7px; background:var(--signal); }
