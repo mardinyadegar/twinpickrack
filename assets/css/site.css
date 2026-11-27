@@ -641,3 +641,8 @@ body.lightbox-open{ overflow:hidden; }
   .pdf-pages-mobile{ display:flex; padding:10px; gap:10px; }
   .pdf-viewer-note{ text-align:left; }
 }
+
+/* ---------- safety page ---------- */
+.safety-heading{ margin-bottom:26px; }
+.safety-heading h2{ margin:0; }
+.brochure-copy h3{ font-size:clamp(1.3rem,2.2vw,1.7rem); margin-bottom:10px; }
